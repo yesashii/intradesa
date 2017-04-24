@@ -16,9 +16,17 @@ $factory->define(intranet\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
-        'remember_token' => str_random(10),
+        'rut'               => strval( rand(11111111, 19999999) ),
+        'xv'                => strval( rand(0, 9) ),
+        'nombre'            => $faker->name,
+        'apellido_paterno'  => $faker->lastName,
+        'apellido_materno'  => $faker->lastName,
+        'email'              => 'lherrera@desa.cl',
+        'activo'             => 1,
+        'url_imagen'         => 'img/usuario_prueba.png',
+        'control_usuario'    => 'seeder',
+        'password'          => $password ?: $password = bcrypt('secret'),
+        'remember_token'    => str_random(10),
+
     ];
 });
