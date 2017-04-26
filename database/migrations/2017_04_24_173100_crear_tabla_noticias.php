@@ -19,10 +19,9 @@ class CrearTablaNoticias extends Migration
             $table->string('titulo');
             $table->string('sub_titulo');
             $table->string('texto');
-            $table->string('autor');
             $table->string('imagen');
-            $table->datetime('fecha');
-            $table->datetime('url');
+            $table->string('fecha')->nullable();
+            $table->string('url')->nullable();
             $table->integer('user_id')->unsigned();
 
             $table->date('created_at');
