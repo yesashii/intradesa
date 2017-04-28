@@ -2,7 +2,7 @@
 
 function traduceMes( $fecha )
 {
-    $mes = substr( $fecha,-5,2 );
+    $mes = substr( $fecha,-4,2 );
     switch ($mes) {
         case 1:
             return "ENE";

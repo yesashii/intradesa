@@ -119,7 +119,7 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    <img src="{{ Auth::user()->url_imagen }}" width="40px" height="40px" alt="..." class="img-circle">{{ Auth::user()->nombre }} <span class="caret"></span>
+                                    <img src="{{ Auth::user()->url_imagen }}" width="40px" height="40px" alt="..." class="img-circle">{{ Auth::user()->int_trabajadores->NOMBRE }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
@@ -148,6 +148,26 @@
     </div>
 
     <!-- Scripts -->
+    <script type="text/javascript" >
+
+        $( "#target" ).scroll(function() {
+            $( "#log" ).append( "<div>Handler for .scroll() called.</div>" );
+        });
+
+        $( "#other" ).click(function() {
+            $( "#target" ).scroll();
+        });
+
+
+        // para las noticias.
+        $( "#noticias" ).scroll(function() {
+            $( "#log" ).append( "<div>Handler for .scroll() called.</div>" );
+        });
+
+
+    </script>
+
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
 </body>
 </html>

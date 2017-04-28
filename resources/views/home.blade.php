@@ -11,20 +11,15 @@
                 <div class="panel panel-default">
 
                     <div class="panel-heading">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#tab-1" role="tab" data-toggle="tab">Noticias recientes</a></li>
-                            <li><a href="#tab-2" role="tab" data-toggle="tab">Noticia principal</a></li>
-                            <li><a href="#tab-3" role="tab" data-toggle="tab">Eventos</a></li>
-                        </ul>
+                        <h1>NOTICIAS</h1>
                     </div>
 
                     <div class="panel-body">
 
-                        <div class="tab-content">
+                        <div id="noticias" class="tab-content">
 
-                            <!-- pestaña 1 -->
-                            <div class="tab-pane active" role="tabpanel" id="tab-1">
 
+                            <div style="overflow: scroll; width: 100%; height: 400px;">
                                 @foreach( $noticias as $noticia )
 
                                     <div class="thumbnail">
@@ -37,21 +32,8 @@
                                     </div>
                                 @endforeach
                                 {{ $noticias->links() }}
-
                             </div>
-                            <!-- #pestaña 1 -->
 
-                            <!-- pestaña 2 -->
-                            <div class="tab-pane" role="tabpanel" id="tab-2">
-                                <p>Second tab content.</p>
-                            </div>
-                            <!-- #pestaña 2 -->
-
-                            <!-- pestaña 3 -->
-                            <div class="tab-pane" role="tabpanel" id="tab-3">
-                                <p>Third tab content.</p>
-                            </div>
-                            <!-- #pestaña 3 -->
 
                         </div><!-- <div class="tab-content"> -->
                     </div>
@@ -103,40 +85,15 @@
                             <!-- pestaña 2 -->
                             <div class="tab-pane" role="tabpanel" id="tab1-2">
 
-                                @foreach( $cumpleSemanaUsuarios as $cumpleanero )
+                                <div class="list-group well">
+                                    @foreach( $cumpleSemanaUsuarios as $cumpleanero )
 
+                                        <a href="#" class="list-group-item"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }}</span></a>
 
-                                    <div class="panel panel-default well">
-                                        <div class="panel-heading">
-                                            <div class="panel-title">
+                                    @endforeach
+                                </div>
 
-                                                <div class="row">
-                                                        <div class="col-md-3 center-block">
-                                                            <img src="{{ $cumpleanero->url_imagen }}" width="50px" height="50px" alt="..." class="img-circle">
-                                                            <div class="text-danger">
-                                                                <div class="lead">
-                                                                    {{ traduceMes( $cumpleanero->fecha_nacimiento ) }}
-                                                                    <br>
-                                                                    {{ traduceDia($cumpleanero->fecha_nacimiento) }}
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                    <div class="col-md-9 ">
-                                                        <blockquote>
-                                                            <p>{{ $cumpleanero->nombre }}</p>
-                                                            <small>{{ $cumpleanero->cargos()->get()[0]->nombre }}</small>
-                                                            <small>{{ $cumpleanero->cargos()->get()[0]->departamentos()->get()[0]->nombre }}</small>
-                                                        </blockquote>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                @endforeach
+                                <!-- cumpleaños -->
 
                             </div>
                             <!-- #pestaña 2 -->
@@ -155,7 +112,17 @@
                     <div class="panel-heading">Cumpleaños del mes</div>
 
                     <div class="panel-body">
-                        Sin información
+
+                        <div id="target" style="overflow: scroll; width: 200px; height: 100px;">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit
+                            esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                            sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia deserunt mollit anim id est laborum.
+                        </div>
                     </div>
                 </div>
 

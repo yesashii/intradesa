@@ -3,7 +3,10 @@
 namespace intranet\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use intranet\Modelos\Noticias;
+
+use intranet\Modelos\INT_TRABAJADORES;
 
 
 
@@ -28,11 +31,19 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $trabajadores = User::find(Auth::user()->id);
+        if( isset($trabajadores->int_trabajadores->CORREOELEC) )
+        {
+            $Usuario = new INT_TRABAJADORES();
+            $cumpleSemanaUsuarios =     $Usuario->traeUsuariosCumpleaniosSemana();
+           // dd($cumpleSemanaUsuarios);
 
-        $Usuario = new User();
-        $cumpleSemanaUsuarios =     $Usuario->traeUsuariosCumpleaniosSemana();
+            $noticias = Noticias::traeTodasLasNoticias();
+            return view('home', compact('noticias','cumpleSemanaUsuarios'));
+        }else{
 
-        $noticias = Noticias::traeTodasLasNoticias();
-        return view('home', compact('noticias','cumpleSemanaUsuarios'));
+            Auth::logout();
+            return view('ctaeliminada');
+        }
     }
 }

@@ -13,7 +13,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class SucursalesTest extends TestCase
 {
     /**
-     * @test
+     *
      */
     public function prueba_relacion_entre_sucursales_y_usuarios()
     {

@@ -29,7 +29,7 @@ class CrearTablaNoticias extends Migration
 
             $table->foreign('user_id')
                 ->references('id')
-                ->on('users')
+                ->on('INT_USUARIOS')
                 ->onDelete('cascade');
         });
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CrearTablaSucursales extends Migration
+class CrearTablaIntUsuarios extends Migration
 {
     /**
      * Run the migrations.
@@ -14,13 +14,12 @@ class CrearTablaSucursales extends Migration
     public function up()
     {
         //
-        Schema::create('sucursales', function (Blueprint $table) {
+        Schema::create('INT_USUARIOS', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
-            $table->string('descripcion')->nullable();
-            $table->string('fono')->nullable();
-            $table->string('direccion')->nullable();
-
+            $table->string('email')->unique();
+            $table->string('url_imagen')->nullable();
+            $table->string('password', 60);
+            $table->rememberToken();
 
 
             $table->string('control_usuario');
@@ -37,6 +36,6 @@ class CrearTablaSucursales extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('sucursales');
+        Schema::dropIfExists('INT_USUARIOS');
     }
 }
