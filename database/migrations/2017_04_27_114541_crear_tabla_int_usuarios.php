@@ -20,6 +20,11 @@ class CrearTablaIntUsuarios extends Migration
             $table->string('url_imagen')->nullable();
             $table->string('password', 60);
             $table->rememberToken();
+            $table->integer('area_id')->unsigned();
+            $table->foreign('area_id')
+                ->references('id_area')
+                ->on('INT_AREAS')
+                ->onDelete('cascade');
 
 
             $table->string('control_usuario');

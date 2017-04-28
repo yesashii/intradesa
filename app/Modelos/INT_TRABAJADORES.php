@@ -38,12 +38,40 @@ class INT_TRABAJADORES extends Model
         $usuarios = INT_TRABAJADORES::whereBetween( DB::raw("SUBSTRING(cast(FECHA_NACIMIENTO as varchar),5,2)"),  [$mesInicio, $mesFin] )
             ->whereBetween( DB::raw(" SUBSTRING(cast(FECHA_NACIMIENTO as varchar),7,2)"),  [$diaInicio, $diaFin] )
             ->where('FECHA_NACIMIENTO','>',0)
-            ->where('CORREOELEC','<>','')
             ->orderBy( DB::raw("DAY(convert(datetime,cast(FECHA_NACIMIENTO as varchar)))") , 'desc')
             ->get();
 
         return $usuarios;
 
     }
+
+    public function traeCumpleaniosDia()
+    {
+        $fecha = new Fechas();
+
+        $mes    = $fecha->traeMesactual();
+        $dia    = $fecha->traeDiaHoy();
+
+        $trabajadores  = INT_TRABAJADORES::where( DB::raw("SUBSTRING(cast(FECHA_NACIMIENTO as varchar),5,2)"),  $mes )
+            ->where( DB::raw(" SUBSTRING(cast(FECHA_NACIMIENTO as varchar),7,2)"),  $dia )
+            ->where('FECHA_NACIMIENTO','>',0)
+            ->orderBy( DB::raw("DAY(convert(datetime,cast(FECHA_NACIMIENTO as varchar)))") , 'desc')
+            ->get();
+        return $trabajadores;
+    }
+
+    public function traeCumpleaniosMes()
+    {
+        $fecha = new Fechas();
+
+        $mes    = $fecha->traeMesactual();
+
+        $trabajadores  = INT_TRABAJADORES::where( DB::raw("SUBSTRING(cast(FECHA_NACIMIENTO as varchar),5,2)"),  $mes )
+            ->where('FECHA_NACIMIENTO','>',0)
+            ->orderBy( DB::raw("DAY(convert(datetime,cast(FECHA_NACIMIENTO as varchar)))") , 'desc')
+            ->get();
+        return $trabajadores;
+    }
+
 
 }

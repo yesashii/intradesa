@@ -17,7 +17,11 @@ class Fechas
     {
         $this->fecha = Carbon::now('America/Santiago');
     }
-
+    /*
+    |--------------------------------------------------------------------------
+    | funciones para los cumpleños de la semana
+    |--------------------------------------------------------------------------
+    */
 
     public function traeMesInicioSemanaCumpleanio()
     {
@@ -47,6 +51,22 @@ class Fechas
         $fechaFin           = Carbon::now('America/Santiago')->addDays( ( -$diaDeLaSemana + 7 ) );
         return $fechaFin->day;
     }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | funciones para los cumpleños del día
+    |--------------------------------------------------------------------------
+    */
+    public function traeDiaHoy()
+    {
+        return $this->fecha->day;
+    }
+    public function traeMesactual()// tambien sirve para los cumpleaños del mes :)
+    {
+        return $this->fecha->month;
+    }
+
 
 
 }

@@ -49,3 +49,10 @@ function traduceDia( $fecha )
     $dia = substr( $fecha,-2,2 );
     return $dia;
 }
+
+function traduceFechaNoticia( $fecha )
+{
+    $aux_fecha = $fecha;
+    $aux_fecha = date("Y-m-d H:i:s");
+    return $aux_fecha;
+}
