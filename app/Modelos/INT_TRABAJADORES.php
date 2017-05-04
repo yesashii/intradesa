@@ -20,10 +20,19 @@ class INT_TRABAJADORES extends Model
 
     public function int_usuarios()
     {
-       return $this->hasOne( User::class, 'CORREOELEC', 'email' );
+       return $this->hasOne( User::class, 'email', 'CORREOELEC' );
       //  return $this->hasOne('App\Phone', 'foreign_key', 'local_key');
     }
 
+
+    public function traeDetalleTrabajador( $id )
+    {
+        $usuario        = User::find($id);
+        $trabajadores   = INT_TRABAJADORES::where('CORREOELEC', $usuario->email)->get();
+
+        return $trabajadores[0];
+
+    }
 
     public static function todosPaginados()
     {
@@ -33,15 +42,31 @@ class INT_TRABAJADORES extends Model
 
     public function buscar( Request $request )
     {
-        $trabajadores = INT_TRABAJADORES::where( 'EMPRESA', 'like', "'%".$request->EMPRESA."%'" )
-            ->where( 'FICHA', 'like', "'%".$request->FICHA."%'" )
-            ->where( 'NOMBRE', 'like', "'%".$request->NOMBRE."%'" )
-            ->where( 'APELLIDO_PATERNO', 'like', "'%".$request->APELLIDO_PATERNO."%'" )
-            ->where( 'CORREOELEC', 'like', "'%".$request->CORREOELEC."%'" )
-            ->where( 'CARGO', 'like', "'%".$request->CARGO."%'" )
-            ->get();
 
-        return $trabajadores;
+        if( $this->soloEmpresa( $request ) )
+        {
+            $trabajadores = INT_TRABAJADORES::where( 'EMPRESA', 'like', '%'.$request->EMPRESA.'%' );
+        }elseif ( $this->soloApellido( $request ) ){
+            $trabajadores = INT_TRABAJADORES::where( 'APELLIDO_PATERNO', 'like', '%'.$request->APELLIDO_PATERNO.'%' );
+        }elseif ( $this->soloNombre( $request ) ){
+            $trabajadores = INT_TRABAJADORES::where( 'NOMBRE', 'like', '%'.$request->NOMBRE.'%' );
+        }elseif ( $this->soloFicha( $request ) ){
+            $trabajadores = INT_TRABAJADORES::where( 'FICHA', 'like', '%'.$request->FICHA.'%' );
+        }elseif ( $this->soloCorreo( $request ) ){
+            $trabajadores = INT_TRABAJADORES::where( 'CORREOELEC', 'like', '%'.$request->CORREOELEC.'%' );
+        }elseif ( $this->soloCargo( $request ) ){
+            $trabajadores = INT_TRABAJADORES::where( 'CARGO', 'like', '%'.$request->CARGO.'%' );
+        }else{
+            $trabajadores = INT_TRABAJADORES::where( 'EMPRESA', 'like', '%'.$request->EMPRESA.'%' )
+                ->where( 'FICHA', 'like', '%'.$request->FICHA.'%' )
+                ->where( 'NOMBRE', 'like', '%'.$request->NOMBRE.'%' )
+                ->where( 'APELLIDO_PATERNO', 'like', '%'.$request->APELLIDO_PATERNO.'%' )
+                ->where( 'CORREOELEC', 'like', '%'.$request->CORREOELEC.'%' )
+                ->where( 'CARGO', 'like', '%'.$request->CARGO.'%' );
+        }
+
+        //dd($trabajadores);
+        return $trabajadores->get();
     }
 
     public function traeUsuariosCumpleaniosSemana()
@@ -75,7 +100,7 @@ class INT_TRABAJADORES extends Model
                 ->where( DB::raw(" SUBSTRING(cast(FECHA_NACIMIENTO as varchar),7,2)"),'<=',  $diaFin )
                 ->where('FECHA_NACIMIENTO','>',0)
                 ->union($primer_mes)
-                ->orderBy( DB::raw("orden") , 'asc')
+                ->orderBy( 'orden' , 'asc')
                 ->select( DB::raw( '*, SUBSTRING( Cast(fecha_nacimiento as varchar), 5,4 ) as orden' ) )
                 ->get();
 
@@ -115,4 +140,109 @@ class INT_TRABAJADORES extends Model
     }
 
 
+
+
+
+
+    private function soloEmpresa( Request $request )
+    {
+        $retorno = true;
+        if( $request->EMPRESA != ''   )
+        {
+            $retorno = true;
+        }
+
+        if( $request->FICHA != '' || $request->NOMBRE != '' || $request->APELLIDO_PATERNO != '' || $request->CORREOELEC != '' || $request->CARGO != '' )
+        {
+            $retorno = false;
+        }
+
+        return $retorno;
+
+    }
+
+    private function soloFicha( Request $request )
+    {
+        $retorno = true;
+        if( $request->FICHA != ''   )
+        {
+            $retorno = true;
+        }
+
+        if( $request->EMPRESA != '' || $request->NOMBRE != '' || $request->APELLIDO_PATERNO != '' || $request->CORREOELEC != '' || $request->CARGO != '' )
+        {
+            $retorno = false;
+        }
+
+        return $retorno;
+
+    }
+
+    private function soloNombre( Request $request )
+    {
+        $retorno = true;
+        if( $request->NOMBRE != ''   )
+        {
+            $retorno = true;
+        }
+
+        if( $request->EMPRESA != '' || $request->FICHA != '' || $request->APELLIDO_PATERNO != '' || $request->CORREOELEC != '' || $request->CARGO != '' )
+        {
+            $retorno = false;
+        }
+
+        return $retorno;
+
+    }
+
+    private function soloApellido( Request $request )
+    {
+        $retorno = true;
+        if( $request->APELLIDO_PATERNO != ''   )
+        {
+            $retorno = true;
+        }
+
+        if( $request->EMPRESA != '' || $request->FICHA != '' || $request->NOMBRE != '' || $request->CORREOELEC != '' || $request->CARGO != '' )
+        {
+            $retorno = false;
+        }
+
+        return $retorno;
+
+    }
+
+    private function soloCorreo( Request $request )
+    {
+        $retorno = true;
+        if( $request->CORREOELEC != ''   )
+        {
+            $retorno = true;
+        }
+
+        if( $request->EMPRESA != '' || $request->FICHA != '' || $request->NOMBRE != '' || $request->APELLIDO_PATERNO != '' || $request->CARGO != '' )
+        {
+            $retorno = false;
+        }
+
+        return $retorno;
+
+    }
+
+    private function soloCargo( Request $request )
+    {
+        $retorno = true;
+        if( $request->CARGO != ''   )
+        {
+            $retorno = true;
+        }
+
+        if( $request->EMPRESA != '' || $request->FICHA != '' || $request->NOMBRE != '' || $request->APELLIDO_PATERNO != '' || $request->CORREOELEC != '' )
+        {
+            $retorno = false;
+        }
+
+        return $retorno;
+
+    }
 }

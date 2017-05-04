@@ -1,25 +1,34 @@
 @extends('layouts.app')
 
+
 @section('content')
 
     <div class="container">
 
-        <table class="table table-striped col-sm-6 col-xs-12">
-            <thead>
-            <tr>
-                <th>Empresa</th>
-                <th>RUT</th>
-                <th>Nombres</th>
-                <th>Apellido</th>
-                <th>Correo electrónico</th>
-                <th>Cargo</th>
-                <th>Acci&oacute;n</th>
-            </tr>
-            </thead>
+        <h1>Lista de contactos</h1>
 
-            <tbody>
-            <p>
-            <form action='{{ url('/listacontactos') }}' method="post" id="trabajadores">
+    </div>
+
+    <div class="container table-responsive">
+        <form action='{{ url('/listacontactos') }}' method="post" id="trabajadores">
+
+            <table class="table table-striped col-sm-6 col-xs-12">
+
+                <thead>
+                <tr>
+                    <th>Empresa</th>
+                    <th>RUT</th>
+                    <th>Nombres</th>
+                    <th>Apellido</th>
+                    <th>Correo electrónico</th>
+                    <th>Cargo</th>
+                    <th>Acci&oacute;n</th>
+                </tr>
+                </thead>
+
+
+                <tbody>
+
                 {{ csrf_field() }}
                 <tr>
                     <td>
@@ -43,39 +52,41 @@
                     </td>
 
                     <td>
-                        <input type="email" class="form-control" name="CORREOELEC" id="CORREOELEC"
+                        <input type="text" class="form-control" name="CORREOELEC" id="CORREOELEC"
                                placeholder="Ingrese el Email">
                     </td>
 
                     <td>
-                        <input type="email" class="form-control" name="CARGO" id="CARGO"
+                        <input type="text" class="form-control" name="CARGO" id="CARGO"
                                placeholder="Ingrese el cargo">
                     </td>
 
                     <td>
-                        <button type="button" onclick="document.getElementById('trabajadores').submit()" class="btn btn-primary ">Buscar</button>
+                        <button type="submit" class="btn btn-primary ">Buscar</button>
                     </td>
                 </tr>
-            </form>
-            </p>
-            @foreach( $trabajadores as $trabajador )
-            <tr>
-                <td>{{ $trabajador->EMPRESA             }}</td>
-                <td>{{ $trabajador->FICHA               }}</td>
-                <td>{{ $trabajador->NOMBRE              }}</td>
-                <td>{{ $trabajador->APELLIDO_PATERNO    }}</td>
-                <td>{{ $trabajador->CORREOELEC          }}</td>
-                <td>{{ $trabajador->CARGO               }}</td>
-                <td>{{ 'ver'                            }}</td>
-            </tr>
-            @endforeach
 
-            </tbody>
+                @foreach( $trabajadores as $trabajador )
+                    <tr>
+                        <td>{{ $trabajador->EMPRESA             }}</td>
+                        <td>{{ $trabajador->FICHA               }}</td>
+                        <td>{{ $trabajador->NOMBRE              }}</td>
+                        <td>{{ $trabajador->APELLIDO_PATERNO    }}</td>
+                        <td>{{ $trabajador->CORREOELEC          }}</td>
+                        <td>{{ $trabajador->CARGO               }}</td>
+                        @if( isset($trabajador->int_usuarios->id) )
+                            <td><a class="btn btn-success"  role="button" href="{{ url('detalleUsuario/'.$trabajador->int_usuarios->id) }}"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> ver</a> </td>
+                        @else
+                            <td><a class="btn btn-danger disabled"  role="button" href="#"><span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span> ver </a> </td>
+                        @endif
+                    </tr>
+                @endforeach
 
-        </table>
-        {{ $trabajadores->links() }}
+                </tbody>
+
+            </table>
+        </form>
+        {{ $paginar? $trabajadores->links(): '' }}
     </div>
-
-
 
 @endsection

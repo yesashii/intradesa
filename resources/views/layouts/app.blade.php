@@ -12,6 +12,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('organigrama/jquery.orgchart.css') }}">
+    <link rel="stylesheet" href="{{ asset('organigrama/style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    @yield('extra_css')
 
     <!-- Scripts -->
     <script>
@@ -38,7 +43,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/home') }}">
                         {{ config('app.name', 'Intranet') }}
                     </a>
                 </div>
@@ -58,13 +63,28 @@
                         </li>
                         <!-- #mi perfil -->&nbsp;
 
+                        <!-- nosotros -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                | Nosotros<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li> <a href="{{ route('historia') }}" class="list-group-item">Historia           </a></li>
+                                <li> <a href="{{ route('misionvision') }}" class="list-group-item">Misión y Visión    </a></li>
+                                <li> <a href="{{ route('organigrama') }}" class="list-group-item">Organigrama        </a></li>
+                            </ul>
+                        </li>
+                        <!-- #nosotros -->
+
                         <!-- rrhh -->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 | RRHH<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li>Opción 1</li>
+                                <li> <a href="#" class="list-group-item">Certificados       </a></li>
+                                <li> <a href="#" class="list-group-item">Formularios        </a></li>
+                                <li> <a href="#" class="list-group-item">Liquidaciones      </a></li>
                             </ul>
                         </li>
                         <!-- #rrhh -->&nbsp;
@@ -75,21 +95,12 @@
                                 | Procedimientos<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li>Opción 1</li>
+                                <li> <a href="{{ url('documentos/REGLAMENTO INTERNO DESA 2017.pdf') }}" class="list-group-item">Reglamento interno        </a></li>
                             </ul>
                         </li>
                         <!-- #procedimientos -->&nbsp;
 
-                        <!-- nosotros -->
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                | Nosotros<span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>Opción 1</li>
-                            </ul>
-                        </li>
-                        <!-- #nosotros -->
+
 
                         <!-- contacto -->
                         <li class="dropdown">
@@ -97,7 +108,7 @@
                                 | Contacto<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li>Opción 1</li>
+                                <li> <a href="{{ route('listacontactos') }}" class="list-group-item">Lista de contanto        </a></li>
                             </ul>
                         </li>
                         <!-- #contacto -->&nbsp;
@@ -119,7 +130,7 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    <img src="{{ Auth::user()->url_imagen }}" width="40px" height="40px" alt="..." class="img-circle">{{ Auth::user()->int_trabajadores->NOMBRE }} <span class="caret"></span>
+                                    <img src="{{ url(Auth::user()->url_imagen) }}" width="40px" height="40px" alt="..." class="img-circle">{{ Auth::user()->int_trabajadores->NOMBRE }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
@@ -148,32 +159,13 @@
     </div>
 
     <!-- Scripts -->
-    <script type="text/javascript" >
+    @yield('extra_script')
 
-
-        //scroll para las noticias.
-        $( "#noticias" ).scroll(function() {
-            $( "#log" ).append( "<div>Handler for .scroll() called.</div>" );
-        });
-
-        //scroll para los cumpleaños del mes.
-        $( "#tab1-3" ).scroll(function() {
-            $( "#log" ).append( "<div>Handler for .scroll() called.</div>" );
-        });
-
-        //scroll para los cumpleaños de la semana.
-        $( "#tab1-2" ).scroll(function() {
-            $( "#log" ).append( "<div>Handler for .scroll() called.</div>" );
-        });
-
-        //scroll para los cumpleaños del día.
-        $( "#tab1-1" ).scroll(function() {
-            $( "#log" ).append( "<div>Handler for .scroll() called.</div>" );
-        });
-
-    </script>
 
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('organigrama/jquery.orgchart.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('organigrama/scripts.js') }}"></script>
+
 </body>
 </html>

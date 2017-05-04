@@ -23,15 +23,17 @@
                                 @foreach( $noticias as $noticia )
 
                                     <div class="thumbnail">
-                                        <h1>{{ $noticia->titulo }}</h1><small>{{ $noticia->fecha }}</small>
-                                        <img width="400px" height="400px" src="{{ url($noticia->imagen) }}"/>
-
-                                        <div class="caption">
-
-                                            <h3>{{ $noticia->sub_titulo }}</h3>
-                                            <p>{{ $noticia->texto }}</p>
+                                    <article class="blog-item"><img style="padding-right: 10px;" width="200" height="240" src="{{ url($noticia->imagen) }}" class="pull-left img-responsive" />
+                                        <div class="text">
+                                            <h3><a href="#">{{ $noticia->titulo }} </a></h3>
+                                            <p>{{ $noticia->sub_titulo }}   </p>
+                                            <p>{{ $noticia->fecha }}        </p>
+                                            <p>{{ $noticia->texto }}        </p>
                                         </div>
+                                        <div class="clearfix"></div>
+                                    </article>
                                     </div>
+
                                 @endforeach
                                 {{ $noticias->links() }}
                             </div>
@@ -62,7 +64,11 @@
                                 <div class="list-group">
                                     @if( count($cumplesDia) > 0 )
                                         @foreach( $cumplesDia as $cumpleanero )
-                                            <a href="#" class="list-group-item"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }}</span></a>
+                                            @if( isset($cumpleanero->int_usuarios->id) )
+                                                <a href="{{ url('detalleUsuario/'.$cumpleanero->int_usuarios->id) }}" class="list-group-item list-group-item-success"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span> </a>
+                                            @else
+                                                <a href="#" class="list-group-item list-group-item-danger"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }}</span></a>
+                                            @endif
                                         @endforeach
                                     @else
                                         <a href="#" class="list-group-item list-group-item-info">{{ 'Hoy, no hay cumpleaños' }}</a>
@@ -80,7 +86,11 @@
                                 <div class="list-group">
                                     @if( count($cumpleSemanaUsuarios) > 0 )
                                         @foreach( $cumpleSemanaUsuarios as $cumpleanero )
-                                            <a href="#" class="list-group-item"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }}</span></a>
+                                            @if( isset($cumpleanero->int_usuarios->id) )
+                                                <a href="{{ url('detalleUsuario/'.$cumpleanero->int_usuarios->id) }}" class="list-group-item list-group-item-success"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span> </a>
+                                            @else
+                                                <a href="#" class="list-group-item list-group-item-danger"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span></a>
+                                            @endif
                                         @endforeach
                                     @else
                                         <a href="#" class="list-group-item list-group-item-info">{{ 'Esta semana, no hay cumpleaños' }}</a>
@@ -98,7 +108,11 @@
                                 <div class="list-group">
                                     @if( count($cumplesMes) > 0 )
                                         @foreach( $cumplesMes as $cumpleanero )
-                                            <a href="#" class="list-group-item"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }}</span></a>
+                                            @if( isset($cumpleanero->int_usuarios->id) )
+                                                <a href="{{ url('detalleUsuario/'.$cumpleanero->int_usuarios->id) }}" class="list-group-item list-group-item-success"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span> </a>
+                                            @else
+                                                <a href="#" class="list-group-item list-group-item-danger"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span></a>
+                                            @endif
                                         @endforeach
                                     @else
                                         <a href="#" class="list-group-item list-group-item-info">{{ 'Este mes, no hay cumpleaños' }}</a>
@@ -118,6 +132,35 @@
         </div>
 
     </div>
+@endsection
+
+@section('extra_script')
+
+    <script type="text/javascript" >
+
+        //scroll para las noticias.
+        $( "#noticias" ).scroll(function() {
+            $( "#log" ).append( "<div>Handler for .scroll() called.</div>" );
+        });
+
+        //scroll para los cumpleaños del mes.
+        $( "#tab1-3" ).scroll(function() {
+            $( "#log" ).append( "<div>Handler for .scroll() called.</div>" );
+        });
+
+        //scroll para los cumpleaños de la semana.
+        $( "#tab1-2" ).scroll(function() {
+            $( "#log" ).append( "<div>Handler for .scroll() called.</div>" );
+        });
+
+        //scroll para los cumpleaños del día.
+        $( "#tab1-1" ).scroll(function() {
+            $( "#log" ).append( "<div>Handler for .scroll() called.</div>" );
+        });
+
+    </script>
+
+
 @endsection
 
 
