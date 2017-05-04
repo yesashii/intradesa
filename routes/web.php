@@ -33,6 +33,11 @@ Route::get( 'nosotros/organigrama', 'NosotrosController@organigrama' )->name('or
 Route::get( 'nosotros/historia', 'NosotrosController@historia' )->name('historia');
 
 
+// procedimientos
+
+Route::get( '/procedimientos/reglamento', 'ProcedimientosController@reglamentoInterno' )->name('reglamento');
+
+
 
 
 

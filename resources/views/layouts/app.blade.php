@@ -95,7 +95,7 @@
                                 | Procedimientos<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li> <a href="{{ url('documentos/REGLAMENTO INTERNO DESA 2017.pdf') }}" class="list-group-item">Reglamento interno        </a></li>
+                                <li> <a href="{{ route('reglamento') }}" class="list-group-item">Reglamento interno        </a></li>
                             </ul>
                         </li>
                         <!-- #procedimientos -->&nbsp;
