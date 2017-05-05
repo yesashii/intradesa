@@ -83,7 +83,7 @@
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li> <a href="#" class="list-group-item">Certificados       </a></li>
-                                <li> <a href="#" class="list-group-item">Formularios        </a></li>
+                                <li> <a href="{{ route('formularios') }}" class="list-group-item">Formularios        </a></li>
                                 <li> <a href="#" class="list-group-item">Liquidaciones      </a></li>
                             </ul>
                         </li>

@@ -35,10 +35,10 @@ class HomeController extends Controller
         $trabajadores = User::find(Auth::user()->id);
         if( isset($trabajadores->int_trabajadores->CORREOELEC) )
         {
-            $Usuario = new INT_TRABAJADORES();
-            $cumplesDia                 =     $Usuario->traeCumpleaniosDia();
-            $cumpleSemanaUsuarios       =     $Usuario->traeUsuariosCumpleaniosSemana();
-            $cumplesMes                 =     $Usuario->traeCumpleaniosMes();
+            $Usuario                    = new INT_TRABAJADORES();
+            $cumplesDia                 = $Usuario->traeCumpleaniosDia();
+            $cumpleSemanaUsuarios       = $Usuario->traeUsuariosCumpleaniosSemana();
+            $cumplesMes                 = $Usuario->traeCumpleaniosMes();
            // dd($cumpleSemanaUsuarios);
 
             $noticias = INT_NOTICIAS::paginate(5);

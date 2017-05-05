@@ -37,6 +37,30 @@ Route::get( 'nosotros/historia', 'NosotrosController@historia' )->name('historia
 
 Route::get( '/procedimientos/reglamento', 'ProcedimientosController@reglamentoInterno' )->name('reglamento');
 
+// RRHH
+Route::get( '/rrhh/formularios', 'RrhhControler@muestraFormularios' )->name('formularios');
+Route::post( '/rrhh/formularios', 'RrhhControler@imprimir_formulario_vacaciones' )->name('formularios');
+
+
+Route::get( 'Prueba', function (){
+
+    return view('rrhh.vacaciones');
+
+} );
+
+
+Route::get('/test/', function () {
+    $pdf = PDF::loadView('rrhh.vacaciones');
+
+
+// Enviamos el fichero PDF al navegador.
+   // $pdf->stream('FicheroEjemplo.pdf');
+    $pdf->output(['isRemoteEnabled' => true]);
+
+    return $pdf->download('FicheroEjemplo.pdf');
+
+});
+
 
 
 

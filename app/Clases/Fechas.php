@@ -67,6 +67,17 @@ class Fechas
         return $this->fecha->month;
     }
 
+    /*
+    |--------------------------------------------------------------------------
+    | funciones de formatos de fecha
+    |--------------------------------------------------------------------------
+    */
+
+    public function fechaActual_dd_mm_aaaa()
+    {
+        return  $this->fecha->format('d/m/Y');
+    }
+
 
 
 }
