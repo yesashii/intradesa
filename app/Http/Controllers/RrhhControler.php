@@ -59,8 +59,8 @@ class RrhhControler extends Controller
 
         $nombre         = $request->nombre;
         $cargo          = $request->cargo;
-        $fechaInicio    = $request->fechaInicio;
-        $fechaFin       = $request->fechaFin;
+        $fechaInicio    = $fecha->formateaFecha($request->fechaInicio);
+        $fechaFin       = $fecha->formateaFecha($request->fechaFin);
         $nom_jefe       = $request->nom_jefe;
 
         $pdf = PDF::loadView('rrhh.vacaciones', compact( 'nombre', 'cargo', 'fechaInicio', 'fechaFin', 'nom_jefe', 'fechaActual' ));

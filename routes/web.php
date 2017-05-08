@@ -28,7 +28,6 @@ Route::get( 'detalleUsuario/{id}', 'ContactoController@detalleusuario' )->name('
 // nosotros
 
 Route::get( 'nosotros/misionvision', 'NosotrosController@misionvision' )->name('misionvision');
-
 Route::get( 'nosotros/organigrama', 'NosotrosController@organigrama' )->name('organigrama');
 Route::get( 'nosotros/historia', 'NosotrosController@historia' )->name('historia');
 

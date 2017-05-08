@@ -16,6 +16,12 @@
     <link rel="stylesheet" href="{{ asset('organigrama/style.css') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
+    <style>
+        body {
+            color: #0f0f0f !important;
+        }
+    </style>
+
     @yield('extra_css')
 
     <!-- Scripts -->
@@ -25,7 +31,7 @@
         ]) !!};
     </script>
 </head>
-<body>
+<body >
     <div id="app">
 
         <!-- menu -->

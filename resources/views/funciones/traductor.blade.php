@@ -1,5 +1,33 @@
 <?php
 
+
+
+function traduceFecha( $fecha )
+{
+
+    $dia    = substr( $fecha, -2 );
+    $mes    = substr( $fecha, -4, 2 );
+    $anio   = substr( $fecha,-8, 4 );
+
+    return $dia.'/'.$mes.'/'.$anio;
+
+}
+
+/**
+ * Deja la primera letra de cada palabra con mayuscula
+ *
+ */
+function UC_primer( $cadena )
+{
+
+   $retorno =  strtolower( $cadena );
+   $retorno =  ucwords( $retorno );
+
+   return $retorno;
+
+}
+
+
 function traduceMes( $fecha )
 {
     $mes = substr( $fecha,-4,2 );

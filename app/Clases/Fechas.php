@@ -78,6 +78,15 @@ class Fechas
         return  $this->fecha->format('d/m/Y');
     }
 
+    public function formateaFecha( $fecha )
+    {
+        return $fecha;
+       // $formateo =  $this->fecha->createFromDate( date(strtotime($fecha)) );
+
+        //return  $formateo->format('d/m/Y');
+        //return Carbon::createFromFormat('d/m/Y', $fecha);
+    }
+
 
 
 }
