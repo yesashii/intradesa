@@ -37,12 +37,26 @@
                                     </div>
                                     <!-- #correo -->
 
+                                    <!-- anexo -->
+                                    <div class="row">
+                                        <div class="col-md-3 titulos">Anexo</div>
+                                        <div class="col-md-9">: {{ strtolower( $trabajador->Dimension1 )  }}</div>
+                                    </div>
+                                    <!-- #anexo -->
+
                                     <!-- CARGO -->
                                     <div class="row">
                                         <div class="col-md-3 titulos"> Cargo</div>
                                         <div class="col-md-9">: {{ UC_primer( $trabajador->CARGO ) }}</div>
                                     </div>
                                     <!-- #CARGO -->
+
+                                    <!-- area -->
+                                    <div class="row">
+                                        <div class="col-md-3 titulos"> Área</div>
+                                        <div class="col-md-9">: {{ UC_primer( $trabajador->int_usuarios->int_areas->nombre ) }}</div>
+                                    </div>
+                                    <!-- #area -->
 
                                     <!-- FECHA_INICIO -->
                                     <div class="row">

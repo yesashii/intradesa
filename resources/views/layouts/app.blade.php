@@ -60,19 +60,18 @@
                     <ul class="nav navbar-nav navbar-left">
                         <!-- mi perfil -->
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                | Mi perfil<span class="caret"></span>
+                            <a
+                                    href="{{ (isset(Auth::user()->id))?url('detalleUsuario/'.Auth::user()->id):'#'}}"
+                                    role="button" aria-expanded="false">
+                                 <strong>Mi perfil</strong></span>
                             </a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>Opción 1</li>
-                            </ul>
                         </li>
                         <!-- #mi perfil -->&nbsp;
 
                         <!-- nosotros -->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                | Nosotros<span class="caret"></span>
+                                <strong>Nosotros</strong><span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li> <a href="{{ route('historia') }}" class="list-group-item">Historia           </a></li>
@@ -85,7 +84,7 @@
                         <!-- rrhh -->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                | RRHH<span class="caret"></span>
+                                <strong>RRHH<span class="caret"></span></strong>
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li> <a href="#" class="list-group-item">Certificados       </a></li>
@@ -98,7 +97,7 @@
                         <!-- procedimientos -->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                | Procedimientos<span class="caret"></span>
+                                <strong>Procedimientos<span class="caret"></span></strong>
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li> <a href="{{ route('reglamento') }}" class="list-group-item">Reglamento interno        </a></li>
@@ -111,7 +110,7 @@
                         <!-- contacto -->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                | Contacto<span class="caret"></span>
+                                <strong>Contacto<span class="caret"></span></strong>
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li> <a href="{{ route('listacontactos') }}" class="list-group-item">Lista de contanto        </a></li>

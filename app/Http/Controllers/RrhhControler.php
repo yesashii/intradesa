@@ -22,7 +22,8 @@ class RrhhControler extends Controller
 
         $nombre             = Auth::user()->int_trabajadores->NOMBRE;
         $apellido           = Auth::user()->int_trabajadores->APELLIDO_PATERNO;
-        $nombre_completo    = $nombre.' '.$apellido;
+        $apellidoM          = Auth::user()->int_trabajadores->APELLIDO_MATERNO;
+        $nombre_completo    = $nombre.' '.$apellido.' '.$apellidoM;
 
 
         return view('rrhh.formularios', compact('nombre_completo', 'fechaActual'));
@@ -62,8 +63,9 @@ class RrhhControler extends Controller
         $fechaInicio    = $fecha->formateaFecha($request->fechaInicio);
         $fechaFin       = $fecha->formateaFecha($request->fechaFin);
         $nom_jefe       = $request->nom_jefe;
+        $rut            = Auth::user()->int_trabajadores->FICHA;
 
-        $pdf = PDF::loadView('rrhh.vacaciones', compact( 'nombre', 'cargo', 'fechaInicio', 'fechaFin', 'nom_jefe', 'fechaActual' ));
+        $pdf = PDF::loadView('rrhh.vacaciones', compact( 'nombre', 'cargo', 'fechaInicio', 'fechaFin', 'nom_jefe', 'fechaActual', 'rut' ));
         $pdf->output(['isRemoteEnabled' => true]);
         $pdf->download('FicheroEjemplo.pdf');
         //return $pdf->download('FicheroEjemplo.pdf')->back();

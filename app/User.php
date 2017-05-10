@@ -5,6 +5,7 @@ namespace intranet;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use intranet\Modelos\Cargos;
+use intranet\Modelos\INT_AREAS;
 use intranet\Modelos\INT_TRABAJADORES;
 use intranet\Modelos\Noticias;
 use intranet\Clases\Fechas;
@@ -40,6 +41,13 @@ class User extends Authenticatable
     public function noticias()
     {
         return $this->hasMany(Noticias::class,'user_id', 'id');
+    }
+
+    // | INT_USUARIOS | >- | INT_AREAS |
+
+    public function int_areas()
+    {
+        return $this->belongsTo(INT_AREAS::class, 'area_id', 'id_area');
     }
 
 

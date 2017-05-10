@@ -19,12 +19,11 @@ function traduceFecha( $fecha )
  */
 function UC_primer( $cadena )
 {
-
-   $retorno =  strtolower( $cadena );
-   $retorno =  ucwords( $retorno );
-
-   return $retorno;
-
+    /*
+     * este escandalo se debe a que ni las ñ ni los tildes los toma en cuenta
+     * si no se hace esto.
+     * */
+    return utf8_encode(ucwords(strtolower(utf8_decode($cadena))));
 }
 
 
@@ -80,7 +79,12 @@ function traduceDia( $fecha )
 
 function traduceFechaNoticia( $fecha )
 {
-    $aux_fecha = $fecha;
-    $aux_fecha = date("Y-m-d H:i:s");
-    return $aux_fecha;
+    $fecha = date("d-m-Y H:i:s");
+    return $fecha;
+}
+
+function fechaVaca( $fecha )
+{
+    $date = new DateTime($fecha);
+   return $date->format('d/m/Y');
 }

@@ -1,6 +1,40 @@
 @extends('layouts.app')
 @include('funciones.traductor')
 
+@section('extra_css')
+
+    <style>
+        
+        .fondoCumple{
+
+            background-repeat: no-repeat;
+          /*  background-position: center; */
+            background-image: url(img/cumpleanios/fondo_01.png);
+         /*   background-attachment: fixed; */
+          /*  background-size: 100%; */
+
+            overflow: scroll;
+            width: 100%;
+            height: 200px;
+        }
+
+        .transparente{
+            background: rgba(122, 130, 136, 0.3)!important;
+            color: #3113ff !important;
+            font-weight: bold !important;
+        }
+
+        .transparente_sin_correo{
+            background: rgba(122, 130, 136, 0.3)!important;
+            color: rgba(2, 2, 6, 0.95) !important;
+            font-weight: bold !important;
+        }
+        
+    </style>
+    
+@endsection
+
+
 @section('content')
 
     <div class="container">
@@ -47,7 +81,7 @@
             <div class="col-md-4 ">
 
                 <div class="panel panel-default">
-                    <div class="panel-heading">Cumpleaños</div>
+                    <div class="panel-heading"><img width="15" src="{{ asset('img/cumpleanios/torta.png') }}" alt=""> <strong>Cumpleaños</strong> </div>
 
                     <div class="panel-body">
 
@@ -59,15 +93,15 @@
 
                         <div class="tab-content">
                             <!-- pestaña 1 -->
-                            <div class="tab-pane active well" role="tabpanel" id="tab1-1" style="overflow: scroll; width: 100%; height: 400px;">
+                            <div class="tab-pane active well fondoCumple " role="tabpanel" id="tab1-1">
 
                                 <div class="list-group">
                                     @if( count($cumplesDia) > 0 )
                                         @foreach( $cumplesDia as $cumpleanero )
                                             @if( isset($cumpleanero->int_usuarios->id) )
-                                                <a href="{{ url('detalleUsuario/'.$cumpleanero->int_usuarios->id) }}" class="list-group-item list-group-item-success"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span> </a>
+                                                <a href="{{ url('detalleUsuario/'.$cumpleanero->int_usuarios->id) }}" class="list-group-item transparente"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span> </a>
                                             @else
-                                                <a href="#" class="list-group-item list-group-item-danger"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }}</span></a>
+                                                <a href="#" class="list-group-item transparente_sin_correo"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }}</span></a>
                                             @endif
                                         @endforeach
                                     @else
@@ -81,15 +115,15 @@
                             <!-- #pestaña 1 -->
 
                             <!-- pestaña 2 -->
-                            <div class="tab-pane well" role="tabpanel" id="tab1-2" style="overflow: scroll; width: 100%; height: 400px;">
+                            <div class="tab-pane well fondoCumple" role="tabpanel" id="tab1-2" >
 
                                 <div class="list-group">
                                     @if( count($cumpleSemanaUsuarios) > 0 )
                                         @foreach( $cumpleSemanaUsuarios as $cumpleanero )
                                             @if( isset($cumpleanero->int_usuarios->id) )
-                                                <a href="{{ url('detalleUsuario/'.$cumpleanero->int_usuarios->id) }}" class="list-group-item list-group-item-success"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span> </a>
+                                                <a href="{{ url('detalleUsuario/'.$cumpleanero->int_usuarios->id) }}" class="list-group-item transparente" ><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span> </a>
                                             @else
-                                                <a href="#" class="list-group-item list-group-item-danger"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span></a>
+                                                <a href="#" class="list-group-item transparente_sin_correo"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span></a>
                                             @endif
                                         @endforeach
                                     @else
@@ -104,14 +138,14 @@
                             <!-- #pestaña 2 -->
 
                             <!-- pestaña 3 -->
-                            <div class="tab-pane well" role="tabpanel" id="tab1-3" style="overflow: scroll; width: 100%; height: 400px;">
+                            <div class="tab-pane well fondoCumple" role="tabpanel" id="tab1-3" >
                                 <div class="list-group">
                                     @if( count($cumplesMes) > 0 )
                                         @foreach( $cumplesMes as $cumpleanero )
                                             @if( isset($cumpleanero->int_usuarios->id) )
-                                                <a href="{{ url('detalleUsuario/'.$cumpleanero->int_usuarios->id) }}" class="list-group-item list-group-item-success"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span> </a>
+                                                <a href="{{ url('detalleUsuario/'.$cumpleanero->int_usuarios->id) }}" class="list-group-item transparente"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span> </a>
                                             @else
-                                                <a href="#" class="list-group-item list-group-item-danger"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span></a>
+                                                <a href="#" class="list-group-item transparente_sin_correo"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span></a>
                                             @endif
                                         @endforeach
                                     @else

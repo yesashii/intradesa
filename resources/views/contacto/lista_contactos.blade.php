@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+@section('extra_css')
+    <style>
+        tr {
+            height:5px;                /* <-- the rows height */
+        }
+
+
+
+    </style>
+@endsection
 
 @section('content')
 
@@ -75,9 +85,9 @@
                         <td>{{ $trabajador->CORREOELEC          }}</td>
                         <td>{{ $trabajador->CARGO               }}</td>
                         @if( isset($trabajador->int_usuarios->id) )
-                            <td><a class="btn btn-success"  role="button" href="{{ url('detalleUsuario/'.$trabajador->int_usuarios->id) }}"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> ver</a> </td>
+                            <td><a class="btn btn-success btn-xs"  role="button" href="{{ url('detalleUsuario/'.$trabajador->int_usuarios->id) }}"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> ver</a> </td>
                         @else
-                            <td><a class="btn btn-danger disabled"  role="button" href="#"><span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span> ver </a> </td>
+                            <td><a class="btn btn-danger disabled btn-xs"  role="button" href="#"><span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span> ver </a> </td>
                         @endif
                     </tr>
                 @endforeach
