@@ -24,7 +24,7 @@ class UsuariosTableSeeder extends Seeder
             //usuario 1
             User::create([
                 'email'             => $trabajador->CORREOELEC,
-                'url_imagen'        => 'img/usuario_prueba.png',
+                'url_imagen'        => 'img/usuarios/'.$trabajador->FICHA.'.jpg',
                 'password'          =>  bcrypt('secret'),
                 'remember_token'    => str_random(10),
                 'area_id'           => 1,

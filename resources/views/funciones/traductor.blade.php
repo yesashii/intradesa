@@ -88,3 +88,23 @@ function fechaVaca( $fecha )
     $date = new DateTime($fecha);
    return $date->format('d/m/Y');
 }
+
+function existeArchivo( $link )
+{
+    //dd($link);
+    $nombre_fichero = $link;
+
+    if ( file_exists($nombre_fichero) )
+    {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function rut( $rut_ ) {
+
+    $rut = (int)str_replace('-','',$rut_);
+
+    return number_format( substr ( $rut, 0 , -1 ) , 0, "", ".") . '-' . substr ( $rut, strlen($rut) -1 , 1 );
+}

@@ -142,7 +142,7 @@
                 </tr>
                 <tr>
                     <td width="255" height="20"> <br><br> <strong> Cargo</strong></td>
-                    <td  width="200" class="destaca">:</td>
+                    <td  width="200" class="destaca">: {{ strtoupper($car_jefe) }}</td>
                 </tr>
                 <tr>
                     <td width="255" height="30"> <br><br><br> <strong> Firma</strong></td>

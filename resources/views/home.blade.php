@@ -4,28 +4,28 @@
 @section('extra_css')
 
     <style>
-        
+        /**
+        esto hace que solo el fondo sea transparente.
+         */
         .fondoCumple{
 
-            background-repeat: no-repeat;
-          /*  background-position: center; */
+            background-color: rgba(255, 255, 255, 0.5) !important;
             background-image: url(img/cumpleanios/fondo_01.png);
-         /*   background-attachment: fixed; */
-          /*  background-size: 100%; */
-
+            background-blend-mode: color;
+            background-repeat: no-repeat;
             overflow: scroll;
             width: 100%;
             height: 200px;
         }
 
         .transparente{
-            background: rgba(122, 130, 136, 0.3)!important;
+            background: rgba(2, 41, 136, 0) !important;
             color: #3113ff !important;
             font-weight: bold !important;
         }
 
         .transparente_sin_correo{
-            background: rgba(122, 130, 136, 0.3)!important;
+            background: rgba(122, 130, 136, 0)!important;
             color: rgba(2, 2, 6, 0.95) !important;
             font-weight: bold !important;
         }
@@ -95,7 +95,7 @@
                             <!-- pestaña 1 -->
                             <div class="tab-pane active well fondoCumple " role="tabpanel" id="tab1-1">
 
-                                <div class="list-group">
+                                <div class="list-group ">
                                     @if( count($cumplesDia) > 0 )
                                         @foreach( $cumplesDia as $cumpleanero )
                                             @if( isset($cumpleanero->int_usuarios->id) )

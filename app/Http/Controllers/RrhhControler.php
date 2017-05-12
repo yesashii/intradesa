@@ -43,6 +43,7 @@ class RrhhControler extends Controller
             'fechaInicio'   => 'required',
             'fechaFin'      => 'required',
             'nom_jefe'      => 'required',
+            'car_jefe'      => 'required',
 
         ],$messages = [
             'nombre.required'       => 'El campo nombre, es requerido.',
@@ -50,6 +51,7 @@ class RrhhControler extends Controller
             'fechaInicio.required'  => 'La fecha de inicio, es requerida.',
             'fechaFin.required'     => 'La fecha fin, es requerida.',
             'nom_jefe.required'     => 'El nombre de su jefe es requerido.',
+            'car_jefe.required'     => 'El cargo de su jefe es requerido.',
         ]);
 
         if ($validator->fails()) {
@@ -63,9 +65,10 @@ class RrhhControler extends Controller
         $fechaInicio    = $fecha->formateaFecha($request->fechaInicio);
         $fechaFin       = $fecha->formateaFecha($request->fechaFin);
         $nom_jefe       = $request->nom_jefe;
+        $car_jefe       = $request->car_jefe;
         $rut            = Auth::user()->int_trabajadores->FICHA;
 
-        $pdf = PDF::loadView('rrhh.vacaciones', compact( 'nombre', 'cargo', 'fechaInicio', 'fechaFin', 'nom_jefe', 'fechaActual', 'rut' ));
+        $pdf = PDF::loadView('rrhh.vacaciones', compact( 'nombre', 'cargo', 'fechaInicio', 'fechaFin', 'nom_jefe', 'fechaActual', 'car_jefe','rut' ));
         $pdf->output(['isRemoteEnabled' => true]);
         $pdf->download('FicheroEjemplo.pdf');
         //return $pdf->download('FicheroEjemplo.pdf')->back();
@@ -73,4 +76,10 @@ class RrhhControler extends Controller
 
 
     }
+
+    public function beneficios()
+    {
+        return view('rrhh.beneficios');
+    }
+
 }

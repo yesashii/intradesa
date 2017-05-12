@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/listacontactos', 'ContactoController@listar')->name('listacontactos');
 Route::post('/listacontactos', 'ContactoController@buscar')->name('listacontactos');
@@ -39,6 +39,7 @@ Route::get( '/procedimientos/reglamento', 'ProcedimientosController@reglamentoIn
 // RRHH
 Route::get( '/rrhh/formularios', 'RrhhControler@muestraFormularios' )->name('formularios');
 Route::post( '/rrhh/formularios', 'RrhhControler@imprimir_formulario_vacaciones' )->name('formularios');
+Route::get( '/rrhh/beneficios', 'RrhhControler@beneficios' )->name('beneficios');
 
 
 Route::get( 'Prueba', function (){

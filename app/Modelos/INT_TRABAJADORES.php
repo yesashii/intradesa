@@ -36,7 +36,7 @@ class INT_TRABAJADORES extends Model
 
     public static function todosPaginados()
     {
-        $trabajadores = static::where( 'CORREOELEC', '<>', '' )->paginate(5);
+        $trabajadores = static::where( 'CORREOELEC', '<>', '' )->paginate(10);
         return $trabajadores;
     }
 
