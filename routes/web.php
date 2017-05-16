@@ -27,9 +27,16 @@ Route::get( 'detalleUsuario/{id}', 'ContactoController@detalleusuario' )->name('
 
 // nosotros
 
-Route::get( 'nosotros/misionvision', 'NosotrosController@misionvision' )->name('misionvision');
-Route::get( 'nosotros/organigrama', 'NosotrosController@organigrama' )->name('organigrama');
+Route::get( 'nosotros/mision', 'NosotrosController@mision' )->name('mision');
+Route::get( 'nosotros/valores', 'NosotrosController@valores' )->name('valores');
+Route::get( 'nosotros/organigrama/{id}', 'NosotrosController@organigrama' )->name('organigrama');
 Route::get( 'nosotros/historia', 'NosotrosController@historia' )->name('historia');
+
+Route::get('/orga', function (){
+
+    return view('nosotros.organigrama_2');
+
+});
 
 
 // procedimientos

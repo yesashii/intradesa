@@ -17,7 +17,7 @@
                     <li><a href="#tab1-3" role="tab" data-toggle="tab">VIDA PERSONAL, FAMILIAR Y RECREACION</a></li>
                     <li><a href="#tab1-4" role="tab" data-toggle="tab">ECONOMÍA</a></li>
                 </ul>
-
+            </div>
 
         </div>
 

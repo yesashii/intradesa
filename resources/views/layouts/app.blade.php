@@ -202,9 +202,11 @@ function traduceNombreUsr( $nombres )
                                 <ul class="dropdown-menu" role="menu">
                                     <li> <a href="{{ route('historia') }}" >Historia</a></li>
                                     <li class="divider"></li>
-                                    <li> <a href="{{ route('misionvision') }}" >Misión y Visión</a></li>
+                                    <li> <a href="{{ route('mision') }}" >Misión</a></li>
                                     <li class="divider"></li>
-                                    <li> <a href="{{ route('organigrama') }}" >Organigrama</a></li>
+                                    <li> <a href="{{ route('valores') }}" >Valores</a></li>
+                                    <li class="divider"></li>
+                                    <li> <a href="{{ route('organigrama', ['1']) }}" >Organigrama</a></li>
                                 </ul>
                             </li>
                             <!-- #nosotros -->
