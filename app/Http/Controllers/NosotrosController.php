@@ -21,7 +21,6 @@ class NosotrosController extends Controller
 
     public function organigrama($id)
     {
-
         $padre = INT_ORGANIGRAMA::find($id);
 
         return view('nosotros.organigrama_2', compact('padre'));

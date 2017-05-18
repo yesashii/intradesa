@@ -5,6 +5,10 @@
 
 
 <div class="orgchart col-md-10 col-md-offset-1 table-responsive">
+
+    {{ 'Nivel: '.$padre->nivel($padre->id) }}
+
+
     <table>
         <tbody>
 

@@ -119,7 +119,7 @@ function traduceNombreUsr( $nombres )
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- fuentes -->
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Kaushan+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Kaushan+Script" rel="stylesheet">
 
     <style>
         .navbar-default {
@@ -133,7 +133,7 @@ function traduceNombreUsr( $nombres )
         }
         /* LOGO */
         .navbar-default .navbar-brand {
-            font-family: 'Lobster', cursive;
+            font-family: 'Baloo', cursive;
             font-size: x-large;
             color: white;
         }
