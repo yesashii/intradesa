@@ -48,6 +48,7 @@ Route::get( '/procedimientos/reglamento', 'ProcedimientosController@reglamentoIn
 // RRHH
 Route::get( '/rrhh/formularios', 'RrhhControler@muestraFormularios' )->name('formularios');
 Route::post( '/rrhh/formularios', 'RrhhControler@imprimir_formulario_vacaciones' )->name('formularios');
+Route::get( '/rrhh/liquidaciones', 'RrhhControler@liquidaciones' )->name('liquidaciones');
 Route::get( '/rrhh/beneficios', 'RrhhControler@beneficios' )->name('beneficios');
 
 

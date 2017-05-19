@@ -73,6 +73,18 @@ class Fechas
     |--------------------------------------------------------------------------
     */
 
+    public function trae_solo_anio_actual()
+    {
+        return $this->fecha->year;
+    }
+
+    public function trae_solo_mes_actual()
+    {
+        $mes = $this->fecha->month;
+        (strlen($mes)<2)? $mes = '0'.$mes:$mes;
+        return $mes;
+    }
+
     public function fechaActual_dd_mm_aaaa()
     {
         return  $this->fecha->format('d/m/Y');

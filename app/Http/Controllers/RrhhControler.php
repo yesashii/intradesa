@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 use intranet\Clases\Fechas;
+use intranet\Modelos\INT_TRABAJADORES;
 
 use PDF;
+use Illuminate\Support\Facades\File;
 
 use Illuminate\Support\Facades\Validator;
 use Illuminate\View\View;
@@ -73,6 +75,30 @@ class RrhhControler extends Controller
         $pdf->download('FicheroEjemplo.pdf');
         //return $pdf->download('FicheroEjemplo.pdf')->back();
         return $pdf->download('formularioVacaciones.pdf');
+
+
+    }
+
+    public function liquidaciones()
+    {
+        $o_trabajador = new INT_TRABAJADORES();
+        $trabajador = $o_trabajador->traeDetalleTrabajador( Auth::user()->id );
+
+        $files = File::allFiles('liquidaciones');
+
+        //dd($files);
+        $archivos = [];
+        foreach ($files as $file)
+        {
+            $cadena_de_texto    = (string)$file;
+            $cadena_buscada     = '15370707-3.pdf';
+            if( strpos($cadena_de_texto, $cadena_buscada) )
+            {
+                array_push ( $archivos,(string)$file );
+            }
+        }
+
+        return view('rrhh.liquidaciones', compact('archivos'));
 
 
     }

@@ -108,3 +108,22 @@ function rut( $rut_ ) {
 
     return number_format( substr ( $rut, 0 , -1 ) , 0, "", ".") . '-' . substr ( $rut, strlen($rut) -1 , 1 );
 }
+
+
+/**
+ * Recibe un formato "liquidaciones\20170101_15370707-3.pdf" y retorna 01-ENE-2017
+ *
+ */
+function detalle_liquidacion( $cadena )
+{
+    $f_cadena = $cadena;
+
+    $sub_cadena_fecha = substr( $f_cadena, 14,8 );
+
+    $dia    = traduceDia($sub_cadena_fecha);
+    $mes    = traduceMes($sub_cadena_fecha);
+    $anio   = substr( $sub_cadena_fecha, 0,4 );
+
+    return $dia.'-'.$mes.'-'.$anio;
+
+}

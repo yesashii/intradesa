@@ -29,7 +29,7 @@
                             <div class="row">
                                 <div class="col-md-4"><p>
                                 @if( existeArchivo( $trabajador->int_usuarios->url_imagen) )
-                                        <img width="300" height="300" src="{{ url( $trabajador->int_usuarios->url_imagen) }}" alt="">
+                                        <img width="225" height="225" src="{{ url( $trabajador->int_usuarios->url_imagen) }}" alt="">
                                 @else
                                         <img src="{{ url('img/usuario_prueba.png') }}" alt="">
                                 @endif
@@ -38,49 +38,49 @@
 
                                     <!-- EMPRESA -->
                                     <div class="row">
-                                        <div class="col-md-3 titulos"> Empresa</div>
+                                        <div class="col-md-2 titulos"> Empresa</div>
                                         <div class="col-md-9">: {{ UC_primer( $trabajador->EMPRESA ) }}</div>
                                     </div>
                                     <!-- #EMPRESA -->
 
                                     <!-- area -->
                                     <div class="row">
-                                        <div class="col-md-3 titulos"> Área</div>
+                                        <div class="col-md-2 titulos"> Área</div>
                                         <div class="col-md-9">: {{ UC_primer( $trabajador->int_usuarios->int_areas->nombre ) }}</div>
                                     </div>
                                     <!-- #area -->
 
                                     <!-- CARGO -->
                                     <div class="row">
-                                        <div class="col-md-3 titulos"> Cargo</div>
+                                        <div class="col-md-2 titulos"> Cargo</div>
                                         <div class="col-md-9">: {{ UC_primer( $trabajador->CARGO ) }}</div>
                                     </div>
                                     <!-- #CARGO -->
 
                                     <!-- FECHA_INICIO -->
                                     <div class="row">
-                                        <div class="col-md-3 titulos"> Fecha inicio</div>
+                                        <div class="col-md-2 titulos"> Fecha inicio</div>
                                         <div class="col-md-9">: {{ traduceFecha( $trabajador->FECHA_INICIO ) }}</div>
                                     </div>
                                     <!-- #FECHA_INICIO -->
 
                                     <!-- correo -->
                                     <div class="row">
-                                        <div class="col-md-3 titulos"> Correo</div>
+                                        <div class="col-md-2 titulos"> Correo</div>
                                         <div class="col-md-9">: <a href="{{'mailto:'.$trabajador->CORREOELEC}}">{{ strtolower( $trabajador->CORREOELEC )  }}</a></div>
                                     </div>
                                     <!-- #correo -->
 
                                     <!-- TMOVIL -->
                                     <div class="row">
-                                        <div class="col-md-3 titulos">Móvil</div>
+                                        <div class="col-md-2 titulos">Móvil</div>
                                         <div class="col-md-9">: {{ strtolower( $trabajador->Dimension2 )  }}</div>
                                     </div>
                                     <!-- #TMOVIL -->
 
                                     <!-- anexo -->
                                     <div class="row">
-                                        <div class="col-md-3 titulos">Anexo</div>
+                                        <div class="col-md-2 titulos">Anexo</div>
                                         <div class="col-md-9">: {{ strtolower( $trabajador->Dimension1 )  }}</div>
                                     </div>
                                     <!-- #anexo -->

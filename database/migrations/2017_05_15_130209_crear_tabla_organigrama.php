@@ -19,6 +19,7 @@ class CrearTablaOrganigrama extends Migration
             $table->string('nombre');
             $table->string('rut');
             $table->string('cargo');
+            $table->integer('nivel')->nullable();
             $table->integer('posicion');
             $table->integer('padre')->unsigned()->nullable();
             $table->foreign('padre')->references('id')->on('INT_ORGANIGRAMA');

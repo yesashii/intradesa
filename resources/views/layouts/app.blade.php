@@ -123,7 +123,7 @@ function traduceNombreUsr( $nombres )
 
     <style>
         .navbar-default {
-            background-color: #acbe97 !important;
+            background-color: #c8c6a5 !important;
             border-color: #d3e0e9;
         }
 
@@ -231,7 +231,7 @@ function traduceNombreUsr( $nombres )
                                     </li>
 
                                     <li class="divider"></li>
-                                    <li> <a href="#" >Liquidaciones </a></li>
+                                    <li> <a href="{{ route('liquidaciones') }}" >Liquidaciones </a></li>
 
                                     <li class="divider"></li>
                                     <li class="dropdown-submenu">
@@ -326,14 +326,17 @@ function traduceNombreUsr( $nombres )
 
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+
+
     <script type="text/javascript" src="{{ asset('organigrama/jquery.orgchart.js') }}"></script>
     <script type="text/javascript" src="{{ asset('organigrama/scripts.js') }}"></script>
 
-
+    @yield('extra_script_2')
     <!-- subMenu -->
     <script>
         (function($){
             $(document).ready(function(){
+
                 $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
                     event.preventDefault();
                     event.stopPropagation();
@@ -351,7 +354,11 @@ function traduceNombreUsr( $nombres )
                 $(this).next('ul').toggle();
                 e.stopPropagation();
                 e.preventDefault();
+
+
+
             });
+
         });
     </script>
 

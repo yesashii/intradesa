@@ -31,7 +31,7 @@
                 <div class="row ">
                     <div class="col-md-8 col-md-offset-2">
 
-                        <div class="bs-callout bs-callout-info  ">
+                        <div class="bs-callout bs-callout-success  ">
                             <h4>Instrucciones.</h4>
                             Completa los campos a continuación y descarga tu solicitud <i class="material-icons">&#xE905;</i>.
                         </div>
@@ -165,15 +165,21 @@
 
                                 </div>
 
-                                <button class=" form-control btn btn-primary col-lg-12" type="submit">Descargar formulario <span class="glyphicon glyphicon-download-alt"></span></button>
-
-                                <br><br><br>
-
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        <a href="{{ route('home') }}" class="btn btn-info" role="button"><span class="glyphicon glyphicon-chevron-left"></span>Volver</a>
+                                    <div class="col-md-9">
+                                        <a href="{{ route('home') }}" class="btn btn-success" role="button" style="width: 150px;"><span class="glyphicon glyphicon-chevron-left"></span>Volver</a>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <button class=" form-control btn btn-success" type="submit" style="width: 150px;">Descargar<span class="glyphicon glyphicon-download-alt"></span></button>
                                     </div>
                                 </div>
+
+
+
+
+
+
 
                             </form>
                         </div>

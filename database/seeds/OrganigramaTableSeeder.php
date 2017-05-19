@@ -20,6 +20,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Presidente ejecutivo',
             'padre'             => null,
+            'nivel'             => 1,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -31,6 +32,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Gerente General',
             'padre'             => 1,
+            'nivel'             => 2,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -42,6 +44,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Gerente  Comercial',
             'padre'             => 2,
+            'nivel'             => 3,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -54,6 +57,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Gerente Licores',
             'padre'             => 2,
+            'nivel'             => 3,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -65,6 +69,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Subgerente Vinos',
             'padre'             => 2,
+            'nivel'             => 3,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -76,6 +81,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Gerente Licores',
             'padre'             => 2,
+            'nivel'             => 3,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -87,6 +93,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Área de Cervezas',
             'padre'             => 2,
+            'nivel'             => 3,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -98,6 +105,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'SubGerente Adm. y Finanzas',
             'padre'             => 2,
+            'nivel'             => 3,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -109,6 +117,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'SubGerente Operaciones',
             'padre'             => 2,
+            'nivel'             => 3,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -120,6 +129,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Jefe de RRHH',
             'padre'             => 2,
+            'nivel'             => 3,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -137,6 +147,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'KAM',
             'padre'             => 3,
+            'nivel'             => 4,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -147,6 +158,7 @@ class OrganigramaTableSeeder extends Seeder
             'cargo'             => 'KAM Supermercados',
             'padre'             => 11,
             'posicion'          => 1,
+            'nivel'             => 3,
             'control_usuario'   => 'seeder',
         ]);
         INT_ORGANIGRAMA::create([
@@ -154,6 +166,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'KAM Supermercados',
             'padre'             => 11,
+            'nivel'             => 3,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -163,6 +176,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'KAM  CTAS . CLAVES VINOS',
             'padre'             => 11,
+            'nivel'             => 3,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -172,6 +186,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'KAM Mayorista',
             'padre'             => 11,
+            'nivel'             => 3,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -182,6 +197,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Jefe Ventas On Premise',
             'padre'             => 3,
+            'nivel'             => 3,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -190,6 +206,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Ejecutivo  Ventas Call Center',
             'padre'             => 16,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -198,6 +215,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Ejecutivo  Ventas Call Center',
             'padre'             => 16,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -206,6 +224,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Ejecutivo  Ventas Call Center',
             'padre'             => 16,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -214,6 +233,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Ejecutivo  Ventas Call Center',
             'padre'             => 16,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -223,6 +243,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Ventas Particulares e Instituciones',
             'padre'             => 16,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -232,6 +253,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Gerente Trade Marketing On',
             'padre'             => 3,
+            'nivel'             => 4,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -241,6 +263,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Jefe On Trade Stgo',
             'padre'             => 22,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -250,6 +273,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Trade Mktg',
             'padre'             => 22,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -258,6 +282,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Trade Mktg',
             'padre'             => 22,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -266,6 +291,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Trade Mktg',
             'padre'             => 22,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -274,6 +300,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'On Trade CCH',
             'padre'             => 22,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -283,6 +310,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'On Trade CCH',
             'padre'             => 22,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -291,6 +319,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Jefe Ventas Supermercado',
             'padre'             => 3,
+            'nivel'             => 4,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -299,6 +328,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Jefe Off Trade',
             'padre'             => 29,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -308,6 +338,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Representante de Ventas de Supermercado',
             'padre'             => 29,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -316,6 +347,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Representante de Ventas de Supermercado',
             'padre'             => 29,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -324,6 +356,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Representante de Ventas de Supermercado',
             'padre'             => 29,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -332,6 +365,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Representante de Ventas de Supermercado',
             'padre'             => 29,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -340,6 +374,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Representante de Ventas de Supermercado',
             'padre'             => 29,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -350,6 +385,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Sales Planner',
             'padre'             => 3,
+            'nivel'             => 4,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -359,6 +395,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Asistente Comercial',
             'padre'             => 36,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -367,6 +404,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Asistente Comercial',
             'padre'             => 36,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -375,6 +413,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Asistente Comercial',
             'padre'             => 36,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -386,6 +425,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Jefe de Ventas',
             'padre'             => 3,
+            'nivel'             => 4,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -396,6 +436,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Santiago',
             'padre'             => 40,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -405,6 +446,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'KAM ON PREMISE',
             'padre'             => 40,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -413,6 +455,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'KAM VI Región',
             'padre'             => 40,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -421,6 +464,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedor Los Andes',
             'padre'             => 40,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -430,6 +474,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Santiago',
             'padre'             => 41,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -439,6 +484,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Santiago',
             'padre'             => 41,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -448,6 +494,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Santiago',
             'padre'             => 41,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -457,6 +504,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Santiago',
             'padre'             => 41,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -466,6 +514,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Santiago',
             'padre'             => 41,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -475,6 +524,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Santiago',
             'padre'             => 41,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -484,6 +534,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Santiago',
             'padre'             => 41,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -493,6 +544,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Santiago',
             'padre'             => 41,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -502,6 +554,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Santiago',
             'padre'             => 41,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -510,6 +563,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Santiago',
             'padre'             => 41,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -520,6 +574,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Trade Marketing Zona Norte',
             'padre'             => 3,
+            'nivel'             => 4,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -529,6 +584,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Jefes de sucursal',
             'padre'             => 3,
+            'nivel'             => 4,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -538,6 +594,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Arica - Iquique',
             'padre'             => 56,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -547,6 +604,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Antofagasta',
             'padre'             => 56,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -556,6 +614,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Copiapó / La Serena',
             'padre'             => 56,
+            'nivel'             => 5,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -566,6 +625,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Administrativa Sucursal Iquique',
             'padre'             => 57,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -575,6 +635,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Encargado Bodegas',
             'padre'             => 57,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -583,6 +644,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Administrativos',
             'padre'             => 57,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -591,6 +653,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Ayudantes Bodega',
             'padre'             => 57,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -600,6 +663,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Arica',
             'padre'             => 57,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -609,6 +673,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Arica',
             'padre'             => 64,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -617,6 +682,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Arica',
             'padre'             => 64,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -626,6 +692,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedor Iquique',
             'padre'             => 57,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -635,6 +702,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedor On Premise',
             'padre'             => 57,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -645,6 +713,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores',
             'padre'             => 57,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -654,6 +723,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedor',
             'padre'             => 69,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -662,6 +732,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedor',
             'padre'             => 69,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -670,6 +741,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedor',
             'padre'             => 69,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -679,6 +751,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Modulo',
             'padre'             => 57,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -688,6 +761,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Modulo',
             'padre'             => 73,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -697,6 +771,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Modulo',
             'padre'             => 73,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -706,6 +781,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Modulo',
             'padre'             => 73,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -715,6 +791,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Modulo',
             'padre'             => 73,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -724,6 +801,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Modulo',
             'padre'             => 73,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -733,6 +811,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores Modulo',
             'padre'             => 73,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -744,6 +823,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Jefe Administrativo',
             'padre'             => 58,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -753,6 +833,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Encargado Bodega',
             'padre'             => 58,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -762,6 +843,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Administrativas Sucursal',
             'padre'             => 58,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -772,6 +854,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Administrativa',
             'padre'             => 82,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -780,6 +863,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Administrativa',
             'padre'             => 82,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -789,6 +873,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Ayudantes Bodega',
             'padre'             => 58,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -799,6 +884,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedores',
             'padre'             => 58,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -808,6 +894,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedor',
             'padre'             => 86,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -816,6 +903,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedor',
             'padre'             => 86,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -824,6 +912,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedor',
             'padre'             => 86,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -832,6 +921,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedor',
             'padre'             => 86,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -840,6 +930,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedor',
             'padre'             => 86,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -848,6 +939,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedor',
             'padre'             => 86,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -856,6 +948,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedor',
             'padre'             => 86,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -864,6 +957,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedor',
             'padre'             => 86,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -872,6 +966,7 @@ class OrganigramaTableSeeder extends Seeder
             'rut'               => '1-9',
             'cargo'             => 'Vendedor',
             'padre'             => 86,
+            'nivel'             => 6,
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -1685,6 +1780,787 @@ class OrganigramaTableSeeder extends Seeder
             'posicion'          => 1,
             'control_usuario'   => 'seeder',
         ]);
+
+
+        // GERENTE LICORES Francisco Yañez (6)
+
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Asistentes MKT',
+            'rut'               => '1-9',
+            'cargo'             => 'Asistentes MKT',
+            'padre'             => 6,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Ricardo Mendez',
+            'rut'               => '1-9',
+            'cargo'             => 'Bartender Licores',
+            'padre'             => 6,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Trades',
+            'rut'               => '1-9',
+            'cargo'             => 'Trades',
+            'padre'             => 6,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Brand Managers',
+            'rut'               => '1-9',
+            'cargo'             => 'Brand Managers',
+            'padre'             => 6,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Product Managers',
+            'rut'               => '1-9',
+            'cargo'             => 'Product Managers',
+            'padre'             => 6,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Community Managers',
+            'rut'               => '1-9',
+            'cargo'             => 'Community Managers',
+            'padre'             => 6,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Diseñadores',
+            'rut'               => '1-9',
+            'cargo'             => 'Diseñadores',
+            'padre'             => 6,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Ricardo Guerrero',
+            'rut'               => '1-9',
+            'cargo'             => 'Premium Portafolio Specialist WG&S',
+            'padre'             => 6,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Rodrigo Vargas',
+            'rut'               => '1-9',
+            'cargo'             => 'Whisky Specialist Glenfiddich',
+            'padre'             => 6,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Felipe Undurraga',
+            'rut'               => '1-9',
+            'cargo'             => 'Encargado de Fiestas',
+            'padre'             => 6,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        // Asistentes MKT (187)
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Carolina Estay',
+            'rut'               => '1-9',
+            'cargo'             => 'Asistente MKT',
+            'padre'             => 187,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Sergio Castex',
+            'rut'               => '1-9',
+            'cargo'             => 'Asistente MKT',
+            'padre'             => 187,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Javier Ramirez',
+            'rut'               => '1-9',
+            'cargo'             => 'Asistente MKT',
+            'padre'             => 187,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        // Trades  (189)
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Sebastián Velasquez',
+            'rut'               => '1-9',
+            'cargo'             => 'Trade OFF Premise',
+            'padre'             => 189,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Isidora De la Barra',
+            'rut'               => '1-9',
+            'cargo'             => 'Trade MKT JACK',
+            'padre'             => 189,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        // Brand Managers  (190)
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Hugo Della Maggiora',
+            'rut'               => '1-9',
+            'cargo'             => 'Brand Manager',
+            'padre'             => 190,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'David Acosta',
+            'rut'               => '1-9',
+            'cargo'             => 'Brand Manager',
+            'padre'             => 190,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Francisca Arias',
+            'rut'               => '1-9',
+            'cargo'             => 'Brand Manager',
+            'padre'             => 190,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        // Product Managers(191)
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'José Ignacio Clavel',
+            'rut'               => '1-9',
+            'cargo'             => 'Product Manager',
+            'padre'             => 191,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Claudia Uribe',
+            'rut'               => '1-9',
+            'cargo'             => 'Product Manager',
+            'padre'             => 191,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Valentina Uribe',
+            'rut'               => '1-9',
+            'cargo'             => 'Product Manager',
+            'padre'             => 191,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        // Community Managers(192)
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Alvaro Galindo',
+            'rut'               => '1-9',
+            'cargo'             => 'Community Manager',
+            'padre'             => 192,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Benjamín Riquelme',
+            'rut'               => '1-9',
+            'cargo'             => 'Community Manager',
+            'padre'             => 192,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        // Diseñadores (193)
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Ma. José Bravo',
+            'rut'               => '1-9',
+            'cargo'             => 'Diseñadora',
+            'padre'             => 193,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Rodolfo Aguayo',
+            'rut'               => '1-9',
+            'cargo'             => 'Diseñador',
+            'padre'             => 193,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        //Gerente de Licores Patricio Vázquez(4)
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Mauricio Guzmán',
+            'rut'               => '1-9',
+            'cargo'             => 'Product Manager Marcas Cervezas Premium',
+            'padre'             => 4,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Constanza Espinoza',
+            'rut'               => '1-9',
+            'cargo'             => 'Product Manager Jaggermeister',
+            'padre'             => 4,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        //Product Manager Jaggermeister Constanza Espinoza(213)
+
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'NN',
+            'rut'               => '1-9',
+            'cargo'             => 'Asistente Marketing',
+            'padre'             => 213,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        //Channel Manager Roger Muñoz (7)
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Sebastian de la Jara',
+            'rut'               => '1-9',
+            'cargo'             => 'Jefe Proyecto Shop',
+            'padre'             => 7,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Daniel San Marín',
+            'rut'               => '1-9',
+            'cargo'             => 'Analista Comercial',
+            'padre'             => 7,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Daniela Molina',
+            'rut'               => '1-9',
+            'cargo'             => 'Diseñadora',
+            'padre'             => 7,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        // GERENTE OPERACIONES y LOGISTICA Alejandro Retamal (9)
+
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Pablo Avila',
+            'rut'               => '1-9',
+            'cargo'             => 'Jefe CD Lampa',
+            'padre'             => 9,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        //Jefe CD Lampa Pablo Avila(218)
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Marisol Aguayo',
+            'rut'               => '1-9',
+            'cargo'             => 'Asistente de Bodega',
+            'padre'             => 218,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Jefes de Turno',
+            'rut'               => '1-9',
+            'cargo'             => 'Jefes de Turno',
+            'padre'             => 218,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Luis Suarez',
+            'rut'               => '1-9',
+            'cargo'             => 'Encargado Bodega MKT',
+            'padre'             => 218,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Miguel Avila',
+            'rut'               => '1-9',
+            'cargo'             => 'Jefe Administrativo',
+            'padre'             => 218,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Sebastián Millie',
+            'rut'               => '1-9',
+            'cargo'             => 'Jefe de Transportes',
+            'padre'             => 218,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'David Zuñiga',
+            'rut'               => '1-9',
+            'cargo'             => 'Jefe Control de Gestión e Inventario',
+            'padre'             => 218,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        // malo
+        INT_ORGANIGRAMA::create([
+            'nombre'            => '',
+            'rut'               => '1-9',
+            'cargo'             => '',
+            'padre'             => null,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Angelina Olguín',
+            'rut'               => '1-9',
+            'cargo'             => 'Encargada de Maquilas',
+            'padre'             => 218,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        // Jefes de Turno(220)
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Mario Carvallo',
+            'rut'               => '1-9',
+            'cargo'             => 'Jefe de Turno',
+            'padre'             => 220,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Marco Pizarro',
+            'rut'               => '1-9',
+            'cargo'             => 'Jefe de Turno',
+            'padre'             => 220,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        //227 - 228
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Encargados de Andenes',
+            'rut'               => '1-9',
+            'cargo'             => 'Encargados de Andenes',
+            'padre'             => 227,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Encargados de Andenes',
+            'rut'               => '1-9',
+            'cargo'             => 'Encargados de Andenes',
+            'padre'             => 228,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Operarios CD',
+            'rut'               => '1-9',
+            'cargo'             => 'Operarios CD',
+            'padre'             => 228,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Operarios CD',
+            'rut'               => '1-9',
+            'cargo'             => 'Operarios CD',
+            'padre'             => 227,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        //Encargado Bodega MKT Luis Suarez(221)
+
+
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Soledad Pérez',
+            'rut'               => '1-9',
+            'cargo'             => 'ADMINISTRATIVA',
+            'padre'             => 221,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Operarios',
+            'rut'               => '1-9',
+            'cargo'             => 'Bodega MKT',
+            'padre'             => 221,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        //Jefe Administrativo Miguel Avila (222)
+
+            INT_ORGANIGRAMA::create([
+                'nombre'            => 'Administrativos CD',
+                'rut'               => '1-9',
+                'cargo'             => 'Administrativos CD',
+                'padre'             => 222,
+                'posicion'          => 1,
+                'control_usuario'   => 'seeder',
+            ]);
+
+            //235
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Jessica  Herrera',
+            'rut'               => '1-9',
+            'cargo'             => 'Administrativa CD',
+            'padre'             => 235,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Mº Victoria Montenegro',
+            'rut'               => '1-9',
+            'cargo'             => 'Administrativa CD',
+            'padre'             => 235,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Carolina Donoso',
+            'rut'               => '1-9',
+            'cargo'             => 'Administrativa CD',
+            'padre'             => 235,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Fabiola López',
+            'rut'               => '1-9',
+            'cargo'             => 'Administrativa CD',
+            'padre'             => 235,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        // Jefe de Transportes Sebastián Millie (223)
+
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Gino Piccolini',
+            'rut'               => '1-9',
+            'cargo'             => 'RUTEADOR',
+            'padre'             => 223,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Asistentes Controladores de Tráfico',
+            'rut'               => '1-9',
+            'cargo'             => 'Asistentes Controladores de Tráfico',
+            'padre'             => 223,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        //241
+
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Susana Bueno',
+            'rut'               => '1-9',
+            'cargo'             => 'Asistente Controlador de Tráfico',
+            'padre'             => 241,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Alejandro Monsalve',
+            'rut'               => '1-9',
+            'cargo'             => 'Asistente Controlador de Tráfico',
+            'padre'             => 241,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        // Jefe Control de Gestión e Inventario David Zuñiga(224)
+
+            INT_ORGANIGRAMA::create([
+                'nombre'            => 'Camilo Morales',
+                'rut'               => '1-9',
+                'cargo'             => 'Analista  de inventario',
+                'padre'             => 224,
+                'posicion'          => 1,
+                'control_usuario'   => 'seeder',
+            ]);
+
+            //244
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Jennifer Fuentes',
+            'rut'               => '1-9',
+            'cargo'             => 'Abastecedora',
+            'padre'             => 244,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Matias Ulloa',
+            'rut'               => '1-9',
+            'cargo'             => 'Asistente de inventario',
+            'padre'             => 244,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        // 226
+
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Maquilas',
+            'rut'               => '1-9',
+            'cargo'             => 'Maquilas',
+            'padre'             => 226,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        // GERENTE DE  ADMIN. Y FINANZAS Victor Díaz Neghme (8)
+
+
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Rodrigo Ábalos',
+            'rut'               => '1-9',
+            'cargo'             => 'Jefe Sistemas',
+            'padre'             => 8,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Juan Carlos Barraza',
+            'rut'               => '1-9',
+            'cargo'             => 'Jefe Contabilidad',
+            'padre'             => 8,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Ximena Tello',
+            'rut'               => '1-9',
+            'cargo'             => 'Jefe Crédito y Cobranza',
+            'padre'             => 8,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Patricio Poblete',
+            'rut'               => '1-9',
+            'cargo'             => 'Encargado COMEX',
+            'padre'             => 8,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Dagoberto Miranda',
+            'rut'               => '1-9',
+            'cargo'             => 'Coor. Admin. Sucursales - COMEX',
+            'padre'             => 8,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        //249
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'CONTABILIDAD',
+            'rut'               => '1-9',
+            'cargo'             => 'CONTABILIDAD',
+            'padre'             => 249,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'TESORERIA',
+            'rut'               => '1-9',
+            'cargo'             => 'TESORERIA',
+            'padre'             => 249,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        //CONTABILIDAD (253)
+
+            INT_ORGANIGRAMA::create([
+                'nombre'            => 'Andrés Cerda',
+                'rut'               => '1-9',
+                'cargo'             => 'Analista Contable Senior',
+                'padre'             => 253,
+                'posicion'          => 1,
+                'control_usuario'   => 'seeder',
+            ]);
+            INT_ORGANIGRAMA::create([
+                'nombre'            => 'Cristian Muñoz',
+                'rut'               => '1-9',
+                'cargo'             => 'Analista Contable Senior',
+                'padre'             => 253,
+                'posicion'          => 1,
+                'control_usuario'   => 'seeder',
+            ]);
+            INT_ORGANIGRAMA::create([
+                'nombre'            => 'Danilo Pantoja',
+                'rut'               => '1-9',
+                'cargo'             => 'Analista Contable Facturas',
+                'padre'             => 253,
+                'posicion'          => 1,
+                'control_usuario'   => 'seeder',
+            ]);
+            INT_ORGANIGRAMA::create([
+                'nombre'            => 'Claudio Martínez',
+                'rut'               => '1-9',
+                'cargo'             => 'Administrativo Contable',
+                'padre'             => 253,
+                'posicion'          => 1,
+                'control_usuario'   => 'seeder',
+            ]);
+
+            INT_ORGANIGRAMA::create([
+                'nombre'            => 'Patricio Miranda',
+                'rut'               => '1-9',
+                'cargo'             => 'Analista Contable Rendiciones y Gastos',
+                'padre'             => 253,
+                'posicion'          => 1,
+                'control_usuario'   => 'seeder',
+            ]);
+
+
+        //TESORERIA (254)
+
+            INT_ORGANIGRAMA::create([
+                'nombre'            => 'Cesar Vera',
+                'rut'               => '1-9',
+                'cargo'             => 'Tesorero',
+                'padre'             => 254,
+                'posicion'          => 1,
+                'control_usuario'   => 'seeder',
+            ]);
+
+            //Jefe de Crédito y Cobranzas Ximena Tello (250)
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Nelson Poblete',
+            'rut'               => '1-9',
+            'cargo'             => 'Analista de Crédito y Cobranzas KAM',
+            'padre'             => 250,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Evelyn Ochoa',
+            'rut'               => '1-9',
+            'cargo'             => 'Analista de Crédito y Cobranzas',
+            'padre'             => 250,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Luis Soto',
+            'rut'               => '1-9',
+            'cargo'             => 'Analista de Crédito y Cobranzas',
+            'padre'             => 250,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Gerardo Muñoz',
+            'rut'               => '1-9',
+            'cargo'             => 'Analista de Recaudaciones',
+            'padre'             => 250,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Jessica Herrera',
+            'rut'               => '1-9',
+            'cargo'             => 'Recaudaciones DESA',
+            'padre'             => 250,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Samuel Morales',
+            'rut'               => '1-9',
+            'cargo'             => 'Encargado de Valores',
+            'padre'             => 250,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        //Jefe de Sistemas Rodrigo Abalos.(248)
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Luis Herrera G.',
+            'rut'               => '15370707-3',
+            'cargo'             => 'Soporte y desarrollo de sistemas',
+            'padre'             => 248,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Manuel Moreno',
+            'rut'               => '1-9',
+            'cargo'             => 'Soporte Computaciónal',
+            'padre'             => 248,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Cristian Palma',
+            'rut'               => '1-9',
+            'cargo'             => 'Encargado Soporte Computación',
+            'padre'             => 248,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        //JEFE RECURSOS HUMANOS Daniella Galli (10)
+
+
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Ernesto Labarrera',
+            'rut'               => '1-9',
+            'cargo'             => 'Encargado de Remuneraciones',
+            'padre'             => 10,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Jennifer Leiva',
+            'rut'               => '1-9',
+            'cargo'             => 'Analista de Recursos Humanos y Remuneraciones',
+            'padre'             => 10,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Margarita Yevilao',
+            'rut'               => '1-9',
+            'cargo'             => 'Analista  de Recursos Humanos',
+            'padre'             => 10,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+        INT_ORGANIGRAMA::create([
+            'nombre'            => 'Gino Bignami',
+            'rut'               => '1-9',
+            'cargo'             => 'Asistente de Prevención y Mantención',
+            'padre'             => 10,
+            'posicion'          => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+
 
 
     }
