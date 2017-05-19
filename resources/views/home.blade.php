@@ -156,8 +156,10 @@
                             </div>
                             <!-- #pestaña 3 -->
                         </div>
-
+                        <i class="material-icons md-15" >&#xE88E;</i> Pincha en el nombre para ver el detalle.
                     </div>
+
+
                 </div>
 
 

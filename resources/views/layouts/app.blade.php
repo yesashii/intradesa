@@ -98,6 +98,7 @@ function traduceNombreUsr( $nombres )
         .bs-callout-info h4 {
             color: #5bc0de;
         }
+        .material-icons.md-15 { font-size: 15px; }
     </style>
     <!-- #CALLOUT -->
 
@@ -175,7 +176,7 @@ function traduceNombreUsr( $nombres )
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/home') }}">
-                        {{ config('app.name', 'Intranet') }}
+                        {{ 'Home' }}
                     </a>
                 </div>
 
