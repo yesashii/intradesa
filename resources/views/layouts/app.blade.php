@@ -99,6 +99,11 @@ function traduceNombreUsr( $nombres )
             color: #5bc0de;
         }
         .material-icons.md-15 { font-size: 15px; }
+
+        .panel-heading{
+            color: #20895e !important;
+        }
+
     </style>
     <!-- #CALLOUT -->
 
@@ -130,12 +135,6 @@ function traduceNombreUsr( $nombres )
 
         /* Texto del menú */
         .navbar-default .navbar-nav>li>a, .navbar-default .navbar-text {
-            color: white;
-        }
-        /* LOGO */
-        .navbar-default .navbar-brand {
-            font-family: 'Baloo', cursive;
-            font-size: x-large;
             color: white;
         }
 
@@ -176,7 +175,7 @@ function traduceNombreUsr( $nombres )
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/home') }}">
-                        {{ 'Home' }}
+
                     </a>
                 </div>
 
@@ -185,6 +184,17 @@ function traduceNombreUsr( $nombres )
                 @if( isset(Auth::user()->id) )
                     <!-- menu personal -->
                         <ul class="nav navbar-nav navbar-left">
+
+                            <!-- mi perfil -->
+                            <li class="dropdown">
+                                <a
+                                        href="{{ url('/home') }}"
+                                        role="button" aria-expanded="false">
+                                    <strong>Home</strong></span>
+                                </a>
+                            </li>
+                            <!-- #mi perfil -->&nbsp;
+
                             <!-- mi perfil -->
                             <li class="dropdown">
                                 <a
@@ -269,6 +279,14 @@ function traduceNombreUsr( $nombres )
                                 </ul>
                             </li>
                             <!-- #contacto -->&nbsp;
+
+                            <!-- sucursales -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    <strong>Sucursales<span class="caret"></span></strong>
+                                </a>
+                            </li>
+                            <!-- #sucursales -->
 
 
                         </ul>

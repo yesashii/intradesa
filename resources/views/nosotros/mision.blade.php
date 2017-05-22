@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 
+
 @section('content')
 
     <div class="container">
@@ -18,18 +19,20 @@
 
                         <div class="bs-callout bs-callout-success ">
                             <div class="row">
-                                <div class="col-md-7 ">
+
+                                <div class="col-md-7 table-bordered" >
+
                                     <p class="text-center"><strong>“CONVERTIRSE EN EL LÍDER DE COMERCIALIZACIÓN Y DISTRIBUCIÓN DE VINOS, LICORES, CERVEZAS Y BEBIDAS PREMIUM, CON COVERTURA NACIONAL Y ALCANCE EN TODOS LOS CANALES DE VENTA”</strong></p>
 
                                     <ul>
 
-                                        <li>Filosofía de Construcción de Marcas en el Largo Plazo.</li>
-                                        <li>Foco en Productos Premium.                    </li>
-                                        <li>Filosofía de Construcción de Marcas en el Largo Plazo.</li>
-                                        <li>Foco en On Premise.</li>
+                                        <li><strong>Filosofía de Construcción de Marcas en el Largo Plazo.</strong></li>
+                                        <li><strong>Foco en Productos Premium.</strong></li>
+                                        <li><strong>Foco en On Premise.</strong></li>
 
                                     </ul>
                                 </div>
+
                                 <div class="col-md-5 ">
                                     <img src="{{ asset('img/nosotros/mision/presidente.jpg') }}" alt="">
                                 </div>

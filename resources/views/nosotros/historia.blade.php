@@ -10,7 +10,7 @@
         <div class="panel panel-default">
 
             <div class="panel-heading">
-                <h1 class="text-center">Historia de DESA SA.</h1>
+                <h1 >HISTORIA</h1>
             </div>
 
             <div class="panel-body">

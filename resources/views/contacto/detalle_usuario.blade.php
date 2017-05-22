@@ -5,6 +5,7 @@
     <style>
 
         .titulos{
+            color: #20895e !important;
             font-weight: bold !important;
         }
 

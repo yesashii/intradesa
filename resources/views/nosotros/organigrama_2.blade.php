@@ -100,7 +100,7 @@
                     <!-- PADRE -->
                     <tr>
                         <td colspan="16" >
-                            <a id="texto" onmouseover="mostrarTooltip(this,'{{ $padre->cargo.', Nivel: '.$padre->nivel($padre->id) }}');" href="{{ (isset($padre->padre))?route('organigrama',[$padre->padre]):'#' }}" >
+                            <a id="texto"  href="{{ (isset($padre->padre))?route('organigrama',[$padre->padre]):'#' }}" >
                             <div draggable="true" class="node">
                                 <div class="title">{{ $padre->cargo }}</div>
                                 <div class="content"> {{ $padre->nombre }} </div>
@@ -129,7 +129,7 @@
                             <!-- #lineas -->
                             <tr class="nodes">
 
-                                    <td colspan="2" id="hijo_1" onmouseover="mostrarTooltip(this,'{{ $hijo->cargo.', Nivel: '.($padre->nivel($padre->id)+1) }}');">
+                                    <td colspan="2" id="hijo_1" >
                                         <table>
                                             <tbody>
                                             <tr>
@@ -178,7 +178,7 @@
                         <!-- cajas -->
                         <tr class="nodes">
                             @forelse( $padre->hijos as $hijo )
-                            <td colspan="2" id="{{'hijo_'.$hijo->id}}" onmouseover="mostrarTooltip(this,'{{ $hijo->cargo.', Nivel: '.($padre->nivel($padre->id)+1) }}');">
+                            <td colspan="2" id="{{'hijo_'.$hijo->id}}" >
                                 <table>
                                     <tbody>
                                     <tr>

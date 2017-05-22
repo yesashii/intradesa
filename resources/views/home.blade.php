@@ -39,13 +39,23 @@
 
     <div class="container">
         <div class="row">
+            <div class="col-md-1">
+                <div class="list-group"> Comercial</div>
+                <div class="list-group"> Marketing</div>
+                <div class="list-group"> Adm. y Finanzas</div>
+                <div class="list-group"> Logística</div>
+                <div class="list-group"> Sistemas</div>
+            </div>
+            <div class="col-md-1">
 
-            <div class="col-md-8">
+            </div>
+
+            <div class="col-md-6">
 
                 <div class="panel panel-default">
 
                     <div class="panel-heading">
-                        <h1>NOTICIAS</h1>
+                        <h2>NOTICIAS</h2>
                     </div>
 
                     <div class="panel-body">
@@ -62,7 +72,7 @@
                                             <h3><a href="#">{{ $noticia->titulo }} </a></h3>
                                             <p>{{ $noticia->sub_titulo }}   </p>
                                             <p>{{ $noticia->fecha }}        </p>
-                                            <p>{{ $noticia->texto }}        </p>
+                                            <p style="font-size: smaller">{{ $noticia->texto }}        </p>
                                         </div>
                                         <div class="clearfix"></div>
                                     </article>
@@ -156,7 +166,7 @@
                             </div>
                             <!-- #pestaña 3 -->
                         </div>
-                        <i class="material-icons md-15" >&#xE88E;</i> Pincha en el nombre para ver el detalle.
+                      <div class="col-md-4"></div>  <i class="material-icons md-15" >&#xE88E;</i> <span style="font-size: x-small; ">Pincha en el nombre para ver su perfil.</span>
                     </div>
 
 
