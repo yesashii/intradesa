@@ -31,20 +31,26 @@
         }
         
     </style>
+    <link rel="stylesheet" href="{{ asset('extras/assets/css/Simple-Vertical-Navigation-Menu.css') }}"/>
     
 @endsection
 
 
 @section('content')
+    <div class="hidden-xs vertical-nav col-md-1">
+        <ul class="vertical-nav-list">
+            <li class="vnav-li"><a href="#" class="vnav-link">Comercial</a></li>
+            <li class="vnav-li"><a href="#" class="vnav-link">Marketing</a></li>
+            <li class="vnav-li"><a href="#" class="vnav-link">Adm. y Finanzas</a></li>
+            <li class="vnav-li"><a href="#" class="vnav-link">Logística</a></li>
+            <li class="vnav-li"><a href="#" class="vnav-link">Sistemas</a></li>
+        </ul>
+    </div>
 
     <div class="container">
         <div class="row">
             <div class="col-md-1">
-                <div class="list-group"> Comercial</div>
-                <div class="list-group"> Marketing</div>
-                <div class="list-group"> Adm. y Finanzas</div>
-                <div class="list-group"> Logística</div>
-                <div class="list-group"> Sistemas</div>
+
             </div>
             <div class="col-md-1">
 
