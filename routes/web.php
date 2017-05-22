@@ -28,7 +28,6 @@ Route::get( 'detalleUsuario/{id}', 'ContactoController@detalleusuario' )->name('
 
 
 // nosotros
-
 Route::get( 'nosotros/mision', 'NosotrosController@mision' )->name('mision');
 Route::get( 'nosotros/valores', 'NosotrosController@valores' )->name('valores');
 Route::get( 'nosotros/organigrama/{id}', 'NosotrosController@organigrama' )->name('organigrama');
@@ -52,11 +51,16 @@ Route::get( '/rrhh/liquidaciones', 'RrhhControler@liquidaciones' )->name('liquid
 Route::get( '/rrhh/beneficios', 'RrhhControler@beneficios' )->name('beneficios');
 
 
-Route::get( 'Prueba', function (){
-
-    return view('rrhh.vacaciones');
+// HOME - CALENDARIO
+Route::get( 'calendario', function (){
+    //return 'en prueba';
+    return view('extras.calendario_2');
 
 } );
+
+
+
+
 
 
 Route::get('/test/', function () {
@@ -71,6 +75,13 @@ Route::get('/test/', function () {
 
 });
 
+
+Route::get( 'Prueba', function (){
+
+    //return 'en prueba';
+    return view('extras.calendario');
+
+} );
 
 
 

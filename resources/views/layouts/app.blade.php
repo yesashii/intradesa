@@ -149,6 +149,18 @@ function traduceNombreUsr( $nombres )
     </style>
 
     @yield('extra_css')
+    <style >
+
+
+
+        .body{
+           background-repeat: no-repeat;
+            background-position: center;
+            background-image: url({{ asset('img/fondo/base.jpg') }}) !important;
+            background-attachment: fixed;
+            background-size: 100%;
+        }
+    </style>
 
     <!-- Scripts -->
     <script>
