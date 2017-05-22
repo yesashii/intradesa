@@ -15,6 +15,19 @@ class NoticiasTableSeeder extends Seeder
      */
     public function run()
     {
+        // noticia 0
+        INT_NOTICIAS::create([
+            'titulo'            => "La Universidad de Chile de Hoyos gritó campeón tras derribar a San Luis",
+            'sub_titulo'        => "Los azules celebraron luego de doblegar a los \"canarios\" en el Nacional.",
+            'texto'             =>  'Universidad de Chile se consagró campeón del Torneo de Clausura 2016-2017 luego de vencer este sábado por 1-0 a San Luis de Quillota ante más de 46.000 almas en el Estadio Nacional, en el marco de una vibrante definición por la última fecha del certamen. Los azules, con 30 puntos en el tope de la tabla, celebraron su decimoctava estrella en un reñido campeonato, el cual concluyeron con nueve triunfos, tres empates y tres derrotas, registro con el cual le arrebataron el título a Colo Colo, que terminó segundo con una unidad menos.',
+            'imagen'            => 'img/noticias/0.jpg',
+            'fecha'             =>  (string)Carbon::now('America/Santiago')->toDateTimeString(),
+            'url'               => '',
+            'usuario_id'        => 1,
+            'control_usuario'   => 'seeder',
+        ]);
+
+
         // noticia 1
         INT_NOTICIAS::create([
             'titulo'            => "Las chicas del cable",
