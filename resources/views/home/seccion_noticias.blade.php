@@ -1,7 +1,7 @@
 <div class="panel panel-default">
 
     <div class="panel-heading">
-        <h2>NOTICIAS</h2>
+        <h2>Noticias</h2>
     </div>
 
     <div class="panel-body">
@@ -9,7 +9,7 @@
         <div id="noticias" class="tab-content">
 
 
-            <div style="overflow: scroll; width: 100%; height: 930px;">
+            <div style="overflow: scroll; width: 100%; height: 745px;">
                 @foreach( $noticias as $noticia )
 
                     <div class="thumbnail">

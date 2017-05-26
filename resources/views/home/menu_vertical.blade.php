@@ -1,6 +1,6 @@
 <div class="panel panel-default">
-    <div class="panel-heading"><strong>ÁREAS</strong></div>
-    <div class="panel-body" style="height: 1000px;">
+    <div class="panel-heading"><strong>Áreas</strong></div>
+    <div class="panel-body" style="height: 810px;">
 
         <!-- INICIO DE ACORDEON -->
         <div class="panel-group" id="accordion">

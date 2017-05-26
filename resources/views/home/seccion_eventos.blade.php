@@ -4,7 +4,7 @@
         <strong>Eventos</strong>
     </div>
 
-    <div class="panel-body" >
+    <div class="panel-body" style="height: 810px;" >
 
         <ul class="event-list">
             <li>

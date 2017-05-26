@@ -74,8 +74,12 @@
             </div>
             <!-- #menú vertical -->
 
+            <div class="col-md-2">
+                @include('home.seccion_eventos')
+            </div>
+
             <!-- seccion de noticias -->
-            <div class="col-md-7">
+            <div class="col-md-5">
 
                 @include('home.seccion_noticias')
 
@@ -108,13 +112,6 @@
                 </div>
                 <!-- #sitios de interes -->
 
-                <!-- Eventos -->
-                <div class="row">
-                    <div class="col-md-12">
-                        @include('home.seccion_eventos')
-                    </div>
-                </div>
-                <!-- #Eventos -->
 
             </div>
 
