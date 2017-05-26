@@ -31,180 +31,197 @@
         }
         
     </style>
-    <link rel="stylesheet" href="{{ asset('extras/assets/css/Simple-Vertical-Navigation-Menu.css') }}"/>
-    
+
+      <style>
+          /* Container personalizado para el home */
+
+          @media (min-width: 768px){.container_home     { width: 750px;  } }
+          @media (min-width: 992px){.container_home     { width: 970px;  } }
+          @media (min-width: 1200px){.container_home    { width: 1400px; } }
+
+          .container_home{
+              margin-right: auto;
+              margin-left: auto;
+              padding-left: 15px;
+              padding-right: 15px;
+          }
+
+          #menu_vertical{
+              font-size: small;
+          }
+
+
+      </style>
+
+      <link rel="stylesheet" href="{{ asset('extras/assets/css/Simple-Vertical-Navigation-Menu.css') }}"/>
+      <link rel="stylesheet" href="{{ asset('extras/evento/css/Important-Highlighted-Event.css') }}"/>
+
 @endsection
 
 
 @section('content')
-    <div class="hidden-xs vertical-nav col-md-1">
-        <ul class="vertical-nav-list">
-            <li class="vnav-li"><a href="#" class="vnav-link">Comercial</a></li>
-            <li class="vnav-li"><a href="#" class="vnav-link">Marketing</a></li>
-            <li class="vnav-li"><a href="#" class="vnav-link">Adm. y Finanzas</a></li>
-            <li class="vnav-li"><a href="#" class="vnav-link">Logística</a></li>
-            <li class="vnav-li"><a href="#" class="vnav-link">Sistemas</a></li>
-        </ul>
-    </div>
 
-    <div class="container">
+
+    <div class="container_home">
+
         <div class="row">
 
-            <div class="col-md-1"></div>
-            <div class="col-md-7">
+            <!-- menú vertical -->
+            <div class="col-md-2">
 
                 <div class="panel panel-default">
-
-                    <div class="panel-heading">
-                        <h2>NOTICIAS</h2>
-                    </div>
-
+                    <div class="panel-heading"><strong>ÁREAS</strong></div>
                     <div class="panel-body">
 
-                        <div id="noticias" class="tab-content">
+                        <!-- INICIO DE ACORDEON -->
+                        <div class="panel-group" id="accordion">
 
+                            <!-- RRHH -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h6 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon glyphicon-log-out"></span> RRHH</a>
+                                    </h6>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <table class="table">
+                                            <tr>
+                                                <td>
+                                                    <a href="#">Certificados</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a data-toggle="collapse"  href="#collapseOne_rrhh_beneficios"><span class="glyphicon glyphicon glyphicon-log-out"></span> Beneficios</a>
 
-                            <div style="overflow: scroll; width: 100%; height: 600px;">
-                                @foreach( $noticias as $noticia )
+                                                    <!-- SUB PANEL BENEFICIOS -->
 
-                                    <div class="thumbnail">
-                                    <article class="blog-item"><img style="padding-right: 10px;" width="200" height="240" src="{{ url($noticia->imagen) }}" class="pull-left img-responsive" />
-                                        <div class="text">
-                                            <h3><a href="#">{{ $noticia->titulo }} </a></h3>
-                                            <p>{{ $noticia->sub_titulo }}   </p>
-                                            <p>{{ $noticia->fecha }}        </p>
-                                            <p style="font-size: smaller">{{ $noticia->texto }}        </p>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </article>
+                                                    <div id="collapseOne_rrhh_beneficios" class="collapse">
+
+                                                        <ul>
+                                                            <li>Corporativos</li>
+                                                            <li>Salud</li>
+                                                            <li>Vida personal, familiar y recreación</li>
+                                                            <li>Economía</li>
+                                                        </ul>
+
+                                                    </div>
+
+                                                    <!-- SUB PANEL BENEFICIOS -->
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#">Liquidaciones</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a data-toggle="collapse"  href="#collapseOne_rrhh_formularios"><span class="glyphicon glyphicon glyphicon-log-out"></span> Formularios</a>
+                                                    <!-- SUB PANEL FORMULARIOS -->
+                                                    <div id="collapseOne_rrhh_formularios" class="collapse">
+
+                                                        <ul>
+                                                            <li>Vacaciones</li>
+                                                        </ul>
+
+                                                    </div>
+                                                    <!-- SUB PANEL FORMULARIOS -->
+
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </div>
-
-                                @endforeach
-                                {{ $noticias->links() }}
+                                </div>
                             </div>
+                            <!-- #RRHH -->
 
-
-                        </div><!-- <div class="tab-content"> -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 ">
-
-                <!-- cumpleaños -->
-                <div class="row">
-
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading"><img width="15" src="{{ asset('img/cumpleanios/torta.png') }}" alt=""> <strong>Cumpleaños</strong> </div>
-
-                        <div class="panel-body">
-
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#tab1-1" role="tab" data-toggle="tab">Hoy <span class="badge">{{ count($cumplesDia) }}</span></a></li>
-                                <li><a href="#tab1-2" role="tab" data-toggle="tab">Semana <span class="badge">{{ count($cumpleSemanaUsuarios) }}</span></a></li>
-                                <li><a href="#tab1-3" role="tab" data-toggle="tab">Mes <span class="badge">{{ count($cumplesMes) }}</span></a></li>
-                            </ul>
-
-                            <div class="tab-content">
-                                <!-- pestaña 1 -->
-                                <div class="tab-pane active well fondoCumple " role="tabpanel" id="tab1-1">
-
-                                    <div class="list-group ">
-                                        @if( count($cumplesDia) > 0 )
-                                            @foreach( $cumplesDia as $cumpleanero )
-                                                @if( isset($cumpleanero->int_usuarios->id) )
-                                                    <a href="{{ url('detalleUsuario/'.$cumpleanero->int_usuarios->id) }}" class="list-group-item transparente"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span> </a>
-                                                @else
-                                                    <a href="#" class="list-group-item transparente_sin_correo"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }}</span></a>
-                                                @endif
-                                            @endforeach
-                                        @else
-                                            <a href="#" class="list-group-item list-group-item-info">{{ 'Hoy, no hay cumpleaños' }}</a>
-                                        @endif
-
-                                    </div>
-
-
+                            <!-- COMERCIAL -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h6 class="panel-title"><span class="glyphicon glyphicon glyphicon-log-out"></span> COMERCIAL</h6>
                                 </div>
-                                <!-- #pestaña 1 -->
-
-                                <!-- pestaña 2 -->
-                                <div class="tab-pane well fondoCumple" role="tabpanel" id="tab1-2" >
-
-                                    <div class="list-group">
-                                        @if( count($cumpleSemanaUsuarios) > 0 )
-                                            @foreach( $cumpleSemanaUsuarios as $cumpleanero )
-                                                @if( isset($cumpleanero->int_usuarios->id) )
-                                                    <a href="{{ url('detalleUsuario/'.$cumpleanero->int_usuarios->id) }}" class="list-group-item transparente" ><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span> </a>
-                                                @else
-                                                    <a href="#" class="list-group-item transparente_sin_correo"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span></a>
-                                                @endif
-                                            @endforeach
-                                        @else
-                                            <a href="#" class="list-group-item list-group-item-info">{{ 'Esta semana, no hay cumpleaños' }}</a>
-                                        @endif
-
-                                    </div>
-
-                                    <!-- cumpleaños -->
-
-                                </div>
-                                <!-- #pestaña 2 -->
-
-                                <!-- pestaña 3 -->
-                                <div class="tab-pane well fondoCumple" role="tabpanel" id="tab1-3" >
-                                    <div class="list-group">
-                                        @if( count($cumplesMes) > 0 )
-                                            @foreach( $cumplesMes as $cumpleanero )
-                                                @if( isset($cumpleanero->int_usuarios->id) )
-                                                    <a href="{{ url('detalleUsuario/'.$cumpleanero->int_usuarios->id) }}" class="list-group-item transparente"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span> </a>
-                                                @else
-                                                    <a href="#" class="list-group-item transparente_sin_correo"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span></a>
-                                                @endif
-                                            @endforeach
-                                        @else
-                                            <a href="#" class="list-group-item list-group-item-info">{{ 'Este mes, no hay cumpleaños' }}</a>
-                                        @endif
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
 
                                     </div>
                                 </div>
-                                <!-- #pestaña 3 -->
                             </div>
-                            <div class="col-md-4"></div>  <i class="material-icons md-15" >&#xE88E;</i> <span style="font-size: x-small; ">Pincha en el nombre para ver su perfil.</span>
-                        </div>
+                            <!-- #COMERCIAL -->
 
+                            <!-- Marketing -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h6 class="panel-title"><span class="glyphicon glyphicon glyphicon-log-out"></span> MARKETING</h6>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- #Marketing -->
+
+                            <!-- Adm. y Finanzas -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h6 class="panel-title"><span class="glyphicon glyphicon glyphicon-log-out"></span> ADM. Y FINANZAS</h6>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- #Adm. y Finanzas -->
+
+                            <!-- Logística -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h6 class="panel-title"><span class="glyphicon glyphicon glyphicon-log-out"></span> LOGÍSTICA</h6>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- #Logística -->
+
+                            <!-- Sistemas -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h6 class="panel-title"><span class="glyphicon glyphicon glyphicon-log-out"></span> SISTEMAS</h6>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- #Sistemas -->
+
+
+
+                        </div>
+                        <!-- #INICIO DE ACORDEON -->
 
                     </div>
-
-
                 </div>
-                <!-- #cumpleaños -->
-
-                <!-- Calendario -->
-                <div class="row">
-                    <div class="panel panel-default">
-
-                        <div class="panel-heading">
-                            <strong>Calendario</strong>
-                        </div>
-
-                        <div class="panel-body" >
-
-                            <iframe width="100%" height="200px" src=" {{ url('calendario') }} "></iframe>
-
-                        </div>
-
-                    </div>
-                </div>
-                <!-- #Calendario -->
-
 
             </div>
+            <!-- #menú vertical -->
+
+            <div class="col-md-5">x</div>
+            <div class="col-md-5">x</div>
 
         </div>
 
     </div>
+
+
 @endsection
 
 @section('extra_script')

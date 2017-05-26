@@ -42,7 +42,7 @@ class HomeController extends Controller
            // dd($cumpleSemanaUsuarios);
 
             $noticias = INT_NOTICIAS::paginate(5);
-            return view('home', compact('noticias','cumpleSemanaUsuarios','cumplesDia','cumplesMes'));
+            return view('home.index', compact('noticias','cumpleSemanaUsuarios','cumplesDia','cumplesMes'));
         }else{
 
             Auth::logout();

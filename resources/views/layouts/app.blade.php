@@ -235,7 +235,7 @@ function traduceNombreUsr( $nombres )
                             <!-- #nosotros -->
 
                             <!-- rrhh -->
-                            <li class="dropdown">
+                        <!--                         <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     <strong>RRHH<span class="caret"></span></strong>
                                 </a>
@@ -267,7 +267,7 @@ function traduceNombreUsr( $nombres )
 
 
                                 </ul>
-                            </li>
+                            </li> -->
                             <!-- #rrhh -->&nbsp;
 
                             <!-- procedimientos -->
