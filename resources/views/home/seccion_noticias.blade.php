@@ -9,7 +9,7 @@
         <div id="noticias" class="tab-content">
 
 
-            <div style="overflow: scroll; width: 100%; height: 745px;">
+            <div style="overflow: scroll; width: 100%; height: 545px;">
                 @foreach( $noticias as $noticia )
 
                     <div class="thumbnail">

@@ -62,36 +62,61 @@
 @section('content')
 
 
-    <div class="container_home">
+    <div class="container_home" style="min-width: 1600px">
 
-        <div class="row">
+        <div class="row table-responsive">
 
             <!-- menú vertical -->
-            <div class="col-md-2">
+            <div class="col-sm-12 col-md-2" style="width: 250px">
 
-                @include('home.menu_vertical')
+                <div class="row">
+                    <div class="col-md-12">
+                        @include('home.menu_vertical')
+                    </div>
+                </div>
 
             </div>
             <!-- #menú vertical -->
 
-            <div class="col-md-2">
-                @include('home.seccion_eventos')
+            <div class="col-md-2" style="width: 250px">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        @include('home.seccion_eventos')
+                    </div>
+                </div>
+
             </div>
 
-            <!-- seccion de noticias -->
-            <div class="col-md-5">
 
-                @include('home.seccion_noticias')
+            <div class="col-md-5" style="width: 500px">
+
+                <!-- seccion de noticias -->
+                <div class="row">
+                    <div class="col-md-12">
+                        @include('home.seccion_noticias')
+                    </div>
+                </div>
+                <!-- #seccion de noticias -->
+
+                <!-- seccion indicadores económicos -->
+                <div class="row">
+                    <div class="col-md-12">
+                        @include('home.seccion_indicadores_ec')
+                    </div>
+                </div>
+                <!-- #seccion indicadores económicos -->
 
             </div>
-            <!-- #seccion de noticias -->
+
+
 
             <div class="col-md-3">
 
                 <!-- cumpleaños -->
                 <div class="row">
                     <div class="col-md-12">
-                        @include('home.seccion_cumpleanios')
+                        <div class="row"> @include('home.seccion_cumpleanios') </div>
                     </div>
                 </div>
                 <!-- #cumpleaños -->
@@ -99,7 +124,7 @@
                 <!-- Calendario -->
                 <div class="row">
                     <div class="col-md-12">
-                        @include('home.seccion_calendario')
+                         @include('home.seccion_calendario')
                     </div>
                 </div>
                 <!-- #Calendario -->
@@ -107,7 +132,7 @@
                 <!-- sitios de interes -->
                 <div class="row">
                     <div class="col-md-12">
-                        @include('home.seccion_sitios_interes')
+                        <div class="row">  @include('home.seccion_sitios_interes') </div>
                     </div>
                 </div>
                 <!-- #sitios de interes -->
@@ -125,6 +150,7 @@
 @endsection
 
 @section('extra_script')
+
 
     <script type="text/javascript" >
 

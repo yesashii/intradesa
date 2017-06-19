@@ -61,6 +61,26 @@ Route::get( 'calendario', function (){
 
 
 
+// APISBIF
+
+Route::get('prueba_api',function (){
+    $url = 'http://api.sbif.cl/api-sbifv3/recursos_api/dolar?apikey=8eeda224be021de585df5588435aa489eb4c5fde&formato=JSON';
+    $datas_json = file_get_contents($url);
+    $datas_array = json_decode($datas_json, true);
+
+
+    dd($datas_array['Dolares']['0']['Valor']);
+
+    foreach ( $datas_array['Dolares']['0'] as $data )
+    {
+        echo($data);
+    }
+
+    dd();
+
+} );
+
+
 
 
 Route::get('/test/', function () {

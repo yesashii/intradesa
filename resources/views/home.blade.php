@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appSemantic')
 @include('funciones.traductor')
 
 @section('extra_css')
@@ -62,12 +62,12 @@
 @section('content')
 
 
-    <div class="container_home">
+    <div class="container-fluid">
 
         <div class="row">
 
             <!-- menú vertical -->
-            <div class="col-md-2">
+            <div class="col-lg-2" style="min-width: 500px!important;">
 
                 <div class="panel panel-default">
                     <div class="panel-heading"><strong>ÁREAS</strong></div>
