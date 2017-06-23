@@ -17,19 +17,16 @@
             width: 100%;
             height: 200px;
         }
-
         .transparente{
             background: rgba(2, 41, 136, 0) !important;
             color: #3113ff !important;
             font-weight: bold !important;
         }
-
         .transparente_sin_correo{
             background: rgba(122, 130, 136, 0)!important;
             color: rgba(2, 2, 6, 0.95) !important;
             font-weight: bold !important;
         }
-
     </style>
 
     <style>
@@ -49,8 +46,6 @@
         #menu_vertical{
             font-size: small;
         }
-
-
     </style>
 
     <link rel="stylesheet" href="{{ asset('extras/assets/css/Simple-Vertical-Navigation-Menu.css') }}"/>
@@ -82,7 +77,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        @include('home.seccion_eventos')
+                      @include('home.seccion_eventos')
                     </div>
                 </div>
 

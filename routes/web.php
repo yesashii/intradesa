@@ -105,6 +105,9 @@ Route::get( 'Prueba', function (){
 
 
 
+//Dinamico B2B
+Route::get('b2bAutorizaIncCombo', 'ExtraControllers\b2bcontroller@cargaComboProceso');
+
 
 
 

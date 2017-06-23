@@ -122,7 +122,15 @@ Ingreso
         var select_all = function ( id_val ) {
             var identifier = "#"+id_val;
             $(identifier).select();
-        }
+        };
+
+        // enter en el campo password
+        $('#password').on('keypress', function (e) {
+           if(e.which === 13)
+           {
+               submit_form();
+           }
+        });
 
     </script>
 @endsection

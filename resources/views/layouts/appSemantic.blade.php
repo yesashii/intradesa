@@ -23,11 +23,22 @@
 </head>
 <body id="bod">
 
+
 @yield('contenido')
 
 <!-- scripts -->
 <script src="{{ asset('semantic\jquery-3.2.1.min.js') }}"></script>
 <script src="{{ asset('semantic/semantic.js') }}"></script>
+
+<!-- menu -->
+<script type="text/javascript">
+
+    $(document).ready( function () {
+        $('.ui.right.dropdown.item').dropdown();
+    });
+
+</script>
+<!-- #menu -->
 
 @yield('extra_script')
 
