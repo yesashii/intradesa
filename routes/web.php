@@ -59,6 +59,11 @@ Route::get( 'calendario', function (){
 } );
 
 
+// SECCION DE ADMINISTRACION.
+Route::get('administracion', 'Admin\AdminController@index');
+Route::get('seccion-subir-noticia', 'Admin\SubirNoticiaController@index');
+
+Route::post('seccion-subir-noticia', 'Admin\SubirNoticiaController@save');
 
 
 // APISBIF
