@@ -22,6 +22,7 @@ class CrearTablaIntNoticias extends Migration
             $table->string('imagen');
             $table->string('fecha');
             $table->string('url')->nullable();
+            $table->char('activa');
             $table->integer('usuario_id')->unsigned();
             $table->foreign('usuario_id')
                 ->references('id')

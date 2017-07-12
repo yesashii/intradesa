@@ -23,6 +23,7 @@ class NoticiasTableSeeder extends Seeder
             'imagen'            => 'img/noticias/0.jpg',
             'fecha'             =>  (string)Carbon::now('America/Santiago')->toDateTimeString(),
             'url'               => '',
+            'activa'            => 0,
             'usuario_id'        => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -36,6 +37,7 @@ class NoticiasTableSeeder extends Seeder
             'imagen'            => 'img/noticias/1.jpg',
             'fecha'             =>  (string)Carbon::now('America/Santiago')->toDateTimeString(),
             'url'               => '',
+            'activa'            => 0,
             'usuario_id'        => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -48,6 +50,7 @@ class NoticiasTableSeeder extends Seeder
             'imagen'            => 'img/noticias/2.jpg',
             'fecha'             =>  (string)Carbon::now('America/Santiago')->toDateTimeString(),
             'url'               => '',
+            'activa'            => 0,
             'usuario_id'        => 1,
             'control_usuario'   => 'seeder',
         ]);
@@ -60,6 +63,7 @@ class NoticiasTableSeeder extends Seeder
             'imagen'            => 'img/noticias/3.jpg',
             'fecha'             =>  (string)Carbon::now('America/Santiago')->toDateTimeString(),
             'url'               => '',
+            'activa'            => 0,
             'usuario_id'        => 1,
             'control_usuario'   => 'seeder',
         ]);

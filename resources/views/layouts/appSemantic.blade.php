@@ -35,6 +35,7 @@
 
     $(document).ready( function () {
         $('.ui.right.dropdown.item').dropdown();
+
     });
 
 </script>

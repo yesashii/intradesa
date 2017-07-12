@@ -63,7 +63,11 @@ Route::get( 'calendario', function (){
 Route::get('administracion', 'Admin\AdminController@index');
 Route::get('seccion-subir-noticia', 'Admin\SubirNoticiaController@index');
 
-Route::post('seccion-subir-noticia', 'Admin\SubirNoticiaController@save');
+Route::post('seccion-subir-noticia-post', 'Admin\SubirNoticiaController@save');
+
+
+
+
 
 
 // APISBIF
