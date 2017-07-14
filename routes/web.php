@@ -62,8 +62,16 @@ Route::get( 'calendario', function (){
 // SECCION DE ADMINISTRACION.
 Route::get('administracion', 'Admin\AdminController@index');
 Route::get('seccion-subir-noticia', 'Admin\SubirNoticiaController@index');
+Route::get('activar-noticia/{id}', 'Admin\SubirNoticiaController@activarNoticia');
+Route::get('elimina-noticia/{id}', 'Admin\SubirNoticiaController@eliminaNoticia');
+
+
 
 Route::post('seccion-subir-noticia-post', 'Admin\SubirNoticiaController@save');
+//API
+Route::get('trae-noticias', 'Admin\SubirNoticiaController@traeNoticias');
+
+
 
 
 

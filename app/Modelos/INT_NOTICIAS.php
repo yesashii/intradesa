@@ -9,7 +9,7 @@ class INT_NOTICIAS extends Model
 {
     //
     protected $table        = 'INT_NOTICIAS';
-    protected $primaryKey   = 'id_noticias';
+    protected $primaryKey   = 'id_noticia';
 
     // relaciones
     //  | INT_USUARIOS |-<| INT_NOTICIAS |
