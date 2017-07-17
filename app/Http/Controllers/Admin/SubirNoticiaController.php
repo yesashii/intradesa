@@ -152,8 +152,10 @@ class SubirNoticiaController extends Controller
     {
         $noticia    = INT_NOTICIAS::find($id);
 
+        $noticia->fecha             = (string)Carbon::now('America/Santiago')->toDateTimeString();
         ($noticia->activa == 0)?$noticia->activa=1:$noticia->activa=0;
         $noticia->save();
+        return response()->json($noticia);
     }
     public function eliminaNoticia( $id )
     {
@@ -164,6 +166,79 @@ class SubirNoticiaController extends Controller
 
         $noticias_ = INT_NOTICIAS::orderBy('fecha', 'desc')->get();
         return response()->json($noticias_);
+    }
+
+    public function actualiza( $id )
+    {
+        $noticia = INT_NOTICIAS::find( $id );
+
+        return response()->json(["data" => $noticia], 200);
+    }
+
+    public function actualizaStore( Request $request )
+    {
+
+        //dd($request->all());
+        $titulo     = $request->titulo;
+        $sub_titulo = $request->sub_titulo;
+        $texto      = $request->texto;
+        $file       = $request->file('file');
+        $id         = $request->id_noticia;
+
+
+        if(!isset($file)){
+            $this->storeNoticia( $id, $titulo, $sub_titulo, $texto );
+
+
+        }else{
+            $noticia    = INT_NOTICIAS::find($id);
+            $imagen     = str_replace('img/noticias/', '', $noticia->imagen );
+            \Storage::delete($imagen );
+            $nombreImagen   = $this->subeImagen($file);
+            $this->storeNoticia_conImagen( $id, $titulo, $sub_titulo, $texto, $nombreImagen );
+
+        }
+
+        $noticias_ = INT_NOTICIAS::orderBy('fecha', 'desc')->get();
+        return response()->json($noticias_);
+
+    }
+
+    private function storeNoticia( $id, $titulo, $sub_titulo, $texto )
+    {
+
+        $noticia    =  INT_NOTICIAS::find( $id );
+
+
+
+        $noticia->titulo            = $titulo;
+        $noticia->sub_titulo        = $sub_titulo;
+        $noticia->texto             = $texto;
+        $noticia->fecha             = (string)Carbon::now('America/Santiago')->toDateTimeString();
+        $noticia->save();
+
+    }
+
+    private function storeNoticia_conImagen( $id, $titulo, $sub_titulo, $texto, $nombreImagen )
+    {
+
+        $noticia    =  INT_NOTICIAS::find( $id );
+
+        $noticia->titulo            = $titulo;
+        $noticia->sub_titulo        = $sub_titulo;
+        $noticia->texto             = $texto;
+        $noticia->fecha             = (string)Carbon::now('America/Santiago')->toDateTimeString();
+        $noticia->imagen            = 'img/noticias/'.$nombreImagen;
+        $noticia->save();
+
+
+    }
+
+    public function muestra( $id )
+    {
+        $noticia = INT_NOTICIAS::find( $id );
+
+        return response()->json(["data" => $noticia], 200);
     }
 
 }

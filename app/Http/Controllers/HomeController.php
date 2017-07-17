@@ -42,7 +42,7 @@ class HomeController extends Controller
             $dollar                     = $this->traeDollar();
            // dd($cumpleSemanaUsuarios);
 
-            $noticias = INT_NOTICIAS::where('activa', 1)->paginate(20);
+            $noticias = INT_NOTICIAS::where('activa', 1)->orderBy('fecha', 'desc')->get();
             return view('home.index', compact('noticias','cumpleSemanaUsuarios','cumplesDia','cumplesMes','dollar'));
         }else{
 

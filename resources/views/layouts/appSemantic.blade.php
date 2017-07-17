@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
     <!-- styles -->
     <link href="{{ asset('semantic/semantic.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/notification.css') }}">
 
 @yield('extra_css')
 <!-- #styles -->

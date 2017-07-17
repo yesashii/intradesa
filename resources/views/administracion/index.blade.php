@@ -49,6 +49,7 @@
         });
 
     </script>
+    <script src="{{ asset('js/jquery.notification.js') }}"></script>
 
 @endsection
 

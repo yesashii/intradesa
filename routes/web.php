@@ -68,8 +68,11 @@ Route::get('elimina-noticia/{id}', 'Admin\SubirNoticiaController@eliminaNoticia'
 
 
 Route::post('seccion-subir-noticia-post', 'Admin\SubirNoticiaController@save');
+Route::post('actualiza-noticia-post', 'Admin\SubirNoticiaController@actualizaStore');
 //API
 Route::get('trae-noticias', 'Admin\SubirNoticiaController@traeNoticias');
+Route::get('actualiza-noticia/{id}', 'Admin\SubirNoticiaController@actualiza');
+Route::get('muestra-noticia/{id}', 'Admin\SubirNoticiaController@muestra');
 
 
 
