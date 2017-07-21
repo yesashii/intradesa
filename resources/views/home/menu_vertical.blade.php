@@ -17,7 +17,7 @@
                         <table class="table">
                             <tr>
                                 <td>
-                                    <a href="#">Certificados</a>
+                                    <a href="{{ route('certificados') }}">Solicitud de certificados</a>
                                 </td>
                             </tr>
                             <tr>

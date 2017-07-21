@@ -17,5 +17,10 @@ class DatabaseSeeder extends Seeder
 
         // organigrama
         $this->call( OrganigramaTableSeeder::class );
+        // solicitudes
+        $this->call( TipoSolitudesTableSeeder::class );
+        $this->call( MotivoSolitudesTableSeeder::class );
+        $this->call( EstadoSolitudesTableSeeder::class );
+
     }
 }

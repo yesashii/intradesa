@@ -49,6 +49,14 @@ Route::get( '/rrhh/formularios', 'RrhhControler@muestraFormularios' )->name('for
 Route::post( '/rrhh/formularios', 'RrhhControler@imprimir_formulario_vacaciones' )->name('formularios');
 Route::get( '/rrhh/liquidaciones', 'RrhhControler@liquidaciones' )->name('liquidaciones');
 Route::get( '/rrhh/beneficios', 'RrhhControler@beneficios' )->name('beneficios');
+// RRHH->Certificados
+Route::get('/rrhh/certificados', 'Rrhh\CertificadosController@index')->name('certificados');
+Route::post('/solicita-solicitud-post', 'Rrhh\CertificadosController@solicita');
+Route::get('/traeCertificados', 'Rrhh\CertificadosController@traeCertificados');
+Route::get('/eliminaSolicitud/{id}', 'Rrhh\CertificadosController@eliminaSolicitud');
+
+Route::get('/muestraCertificado/{id}', 'Rrhh\CertificadosController@muestraCertificado');
+Route::get('/descargaCertificado/{id}', 'Rrhh\CertificadosController@descargaCertificado');
 
 
 // HOME - CALENDARIO
@@ -64,7 +72,12 @@ Route::get('administracion', 'Admin\AdminController@index');
 Route::get('seccion-subir-noticia', 'Admin\SubirNoticiaController@index');
 Route::get('activar-noticia/{id}', 'Admin\SubirNoticiaController@activarNoticia');
 Route::get('elimina-noticia/{id}', 'Admin\SubirNoticiaController@eliminaNoticia');
-
+//ADMINISTRACION -> certificados
+Route::get('aprobar-solicitudes', 'Admin\SolicitudesController@index');
+Route::get('actualiza-solicitudes-admin', 'Admin\SolicitudesController@actualiza_solicitudes');
+Route::get('aprueba-solicitud-admin/{id}', 'Admin\SolicitudesController@aprueba_solicitudes');
+//ADMINISTRACION -> actualiza-contador
+Route::get('actualiza-contador', 'Admin\SolicitudesController@actualiza_contador');
 
 
 Route::post('seccion-subir-noticia-post', 'Admin\SubirNoticiaController@save');
@@ -78,6 +91,10 @@ Route::get('muestra-noticia/{id}', 'Admin\SubirNoticiaController@muestra');
 
 
 
+// pruebas certificados
+Route::get('p_certificado', function (){
+    return view('rrhh.certificados.certificado_antiguedad');
+});
 
 
 

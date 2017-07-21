@@ -355,8 +355,10 @@ function traduceNombreUsr( $nombres )
     @yield('extra_script')
 
 
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+   <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.notification.js') }}"></script>
+    <script src="{{ asset('semantic/semantic.js') }}"></script>
+
 
 
     <script type="text/javascript" src="{{ asset('organigrama/jquery.orgchart.js') }}"></script>
@@ -367,7 +369,6 @@ function traduceNombreUsr( $nombres )
     <script>
         (function($){
             $(document).ready(function(){
-
                 $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
                     event.preventDefault();
                     event.stopPropagation();

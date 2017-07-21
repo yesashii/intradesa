@@ -24,8 +24,9 @@
 </head>
 <body id="bod">
 
-
-@yield('contenido')
+<div id="app">
+    @yield('contenido')
+</div>
 
 <!-- scripts -->
 <script src="{{ asset('semantic\jquery-3.2.1.min.js') }}"></script>
@@ -41,6 +42,8 @@
 
 </script>
 <!-- #menu -->
+
+
 
 @yield('extra_script')
 

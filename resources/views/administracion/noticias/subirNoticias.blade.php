@@ -79,7 +79,6 @@
                 </div>
 
                 <button class="ui button" type="submit"  >Cargar noticia</button>
-                <!-- <button class="ui button" type="submit" >Cargar noticia</button> -->
             </form>
 
         </div>
@@ -100,8 +99,8 @@
                     </thead>
                     <tbody>
                     <tr v-for="noticia in noticias">
-                        <td> @{{ noticia.titulo }} </td>
-                        <td class="center aligned">
+                        <td ><img class="ui top aligned circular image"  width="50px" height="50px" :src="this.location.origin+'/'+noticia.imagen">  <span> @{{ noticia.titulo }} </span> </td>
+                        <td class="center aligned" >
                             <span v-on:click="llamaActualizar( noticia.id_noticia )"><i class="large write square icon" title="Editar"></i></span> |
 
                             <span v-on:click="llamaMostrar( noticia.id_noticia )"><i class="large unhide icon" title="Ver detalle" ></i>|</span>
@@ -109,7 +108,8 @@
                             <span v-on:click="eliminaNoticia( noticia.id_noticia )"> <i class="large remove circle icon" title="Eliminar" ></i></span>
                         </td>
                         <td class="center aligned">
-                            <div class="ui toggle checkbox">
+
+                            <div class="ui fitted toggle checkbox">
                                 <input type="checkbox"
                                        v-on:change="activaNoticia(noticia.id_noticia)"
                                        name="activa" title="Desactivar/Activar" :checked="(noticia.activa == 1)?'checked':''" >
@@ -187,7 +187,10 @@
                     let falta = false;
                     if( !this.id_noticia )
                     {
+                        let largo       = (document.getElementById('file').value).length;
+                        let extencion   = document.getElementById('file').value.substring(largo - 3);
                         if( !document.getElementById('file').value ){ falta= true; string_error += '- No ha seleccionado ninguna imágen\n' }
+                        if( extencion.toUpperCase() != 'JPG' ){ falta= true; string_error += '- El formáto de la imagen debe ser JPG\n' }
                     }
                     if( !this.titulo ){ falta= true; string_error       += '- No ha ingresado el título\n' }
                     if( !this.sub_titulo ){ falta= true; string_error   += '- No ha ingresado el sub título\n' }

@@ -30,41 +30,11 @@ class SubirNoticiaController extends Controller
 
     public function save(Request $request)
     {
-        //dd($request->all());
-        //dd($request->file('file')->getClientMimeType());
+
         $titulo     = $request->titulo;
         $sub_titulo = $request->sub_titulo;
         $texto      = $request->texto;
         $file       = $request->file('file');
-
-        $errores = [];
-
-        //if( !isset($request->titulo) ){ $errores.ar('') }
-
-        $validator = Validator::make($request->all(), [
-            'file'          => 'required',
-            'titulo'        => 'required',
-            'sub_titulo'    => 'required',
-            'texto'         => 'required'
-        ],$messages = [
-            'file.required'       => array_push( $errores, 'No seleccionó ninguna imágen' ),
-            'titulo.required'     => array_push( $errores,'El campo título es requerido' ),
-            'sub_titulo.required' => array_push( $errores,'El campo sub-tìtulo es requerido'),
-            'texto.required'      => array_push( $errores,'El campo texto es requerido')
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json($errores);
-        }
-
-        if( !$this->validaTamanioImagen($file) )
-        {
-            return 'El tamaño de la imagen excede el límite';
-        }
-
-        if( !$this->validaFormato( $file ) ){
-            return 'El formáto debe ser [ jpg ]';
-        }
 
         $nombreImagen = $this->subeImagen($file);
 
@@ -73,8 +43,6 @@ class SubirNoticiaController extends Controller
 
         $noticias_ = INT_NOTICIAS::orderBy('fecha', 'desc')->get();
         return response()->json($noticias_);
-
-       // return view('administracion.noticias.subirNoticias');
 
     }
 
