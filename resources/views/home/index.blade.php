@@ -7,12 +7,27 @@
 
 @section('content')
 
+    <div class="col-md-2">
 
-    <div class="col-md-4">
-        @include('home.seccion_eventos')
+
+        <div class="row">
+            <div class="col-md-12">
+                @include('home.menu_vertical')
+            </div>
+        </div>
     </div>
 
-    <div class="col-md-5">
+    <div class="col-md-3">
+
+        <div class="row">
+            <div class="col-md-12">
+                @include('home.seccion_eventos')
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
 
         <!-- seccion de noticias -->
         <div class="row">

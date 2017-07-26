@@ -25,11 +25,14 @@
 
                 <ul class="nav navbar-nav navbar-left">
 
+                   <!-- ESTO LANZA EL MENU VERTICAL CON JS, SE PIDIO ELIMINAR -->
+                    <!--
                     <li class="dropdown">
                         <a href="#" role="button" onclick="toggle_menu_vertical()" aria-expanded="false">
                             <strong><span class="glyphicon glyphicon-align-justify"></span> Áreas</strong>
                         </a>
                     </li>
+                    -->
 
                     <!-- mi perfil -->
                     <li class="dropdown">
