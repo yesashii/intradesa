@@ -7,10 +7,10 @@
     <div class="panel-body" >
 
         <ul>
-            <li><a target="_blank" href="http://homer.sii.cl/">SII</a> </li>
-            <li><a target="_blank" href="http://pda.desa.cl/osticket/">Mesa de Ayuda DESA.</a> </li>
-            <li><a target="_blank" href="http://www.desa.cl/">DESA SA</a> </li>
-            <li><a target="_blank" href="http://www.lacav.cl/index.php?seccion=club">LACAV</a> </li>
+            <li><a target="_blank" href="http://homer.sii.cl/">www.sii.cl</a> </li>
+            <li><a target="_blank" href="http://www.desa.cl/">www.desa.cl</a> </li>
+            <li><a target="_blank" href="http://www.lacav.cl/index.php?seccion=club">www.lacav.cl</a> </li>
+            <li><a target="_blank" href="http://pda.desa.cl/osticket/">Soporte TI.</a> </li>
         </ul>
 
     </div>

@@ -1,4 +1,4 @@
-<div class="panel panel-default">
+<div class="panel panel-default" style="height: 200px">
 
     <div class="panel-heading">
         <strong>Indicadores económicos</strong>
@@ -7,10 +7,9 @@
     <div class="panel-body" >
 
         <ul>
-            <li><a target="_blank" href="http://homer.sii.cl/">SII</a> </li>
-            <li><a target="_blank" href="http://pda.desa.cl/osticket/">Mesa de Ayuda DESA.</a> </li>
-            <li><a target="_blank" href="http://www.desa.cl/">DESA SA</a> </li>
-            <li><a target="_blank" href="http://www.lacav.cl/index.php?seccion=club">LACAV</a> </li>
+            <li><a target="_blank" href=" http://www.sii.cl/valores_y_fechas/uf/uf2017.htm">UF</a> </li>
+            <li><a target="_blank" href="http://www.sii.cl/valores_y_fechas/dolar/dolar2017.htm">Dolar</a> </li>
+            <li><a target="_blank" href="http://www.sii.cl/valores_y_fechas/utm/utm2017.htm">UTM-UTA-IPC</a> </li>
         </ul>
 
     </div>
@@ -18,4 +17,3 @@
 </div>
 
 
-<div style="height: 400px"></div>

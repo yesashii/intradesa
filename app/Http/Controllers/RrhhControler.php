@@ -91,7 +91,7 @@ class RrhhControler extends Controller
         foreach ($files as $file)
         {
             $cadena_de_texto    = (string)$file;
-            $cadena_buscada     = '15370707-3.pdf';
+            $cadena_buscada     = $trabajador->FICHA.'.pdf';
             if( strpos($cadena_de_texto, $cadena_buscada) )
             {
                 array_push ( $archivos,(string)$file );

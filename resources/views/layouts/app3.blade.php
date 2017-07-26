@@ -139,7 +139,6 @@ function traduceNombreUsr( $nombres )
 
         body {
             color: #0f0f0f !important;
-            min-width: 1500px !important;
         }
 
         .text_usuario{
@@ -387,10 +386,6 @@ function traduceNombreUsr( $nombres )
 
         });
     </script>
-
-
-
-
 
 </body>
 </html>
