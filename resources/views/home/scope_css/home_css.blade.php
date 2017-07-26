@@ -47,31 +47,28 @@
 <!-- carrousel -->
 <style>
     div.jumbotron.carousel-hero {
+        height: 200px;
         color:#fff;
+        padding-top: 10px !important;
         text-align:center;
-        /*  background-size:cover;
-          background-position:center;
-          padding-top:100px;
-          padding-bottom:100px;
-          margin-bottom:0;*/
+        background-size:cover;
+        background-position:center;
+        margin-bottom:0;
+        margin-top:0;
     }
 
-    h1.hero-title, h2.hero-title, h3.hero-title {
-        text-shadow:0 3px 3px rgba(0,0,0,0.4);
-        color:#fff;
-    }
 
-    p.hero-subtitle {
-        max-width:600px;
-        margin:25px auto;
-        padding:10px 15px;
-        color:#fff;
-    }
 
 </style>
 <!-- #carrousel -->
 
-
+<!-- TITULOS DE LOS PANELES -->
+<style>
+    .titulo-panel{
+        color:#658c63 !important;
+    }
+</style>
+<!-- #TITULOS DE LOS PANELES -->
 
 
 

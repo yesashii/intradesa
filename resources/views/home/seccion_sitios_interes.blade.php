@@ -1,7 +1,7 @@
 <div class="panel panel-default">
 
     <div class="panel-heading">
-        <strong>Sitios de interés</strong>
+        <strong>Sitios de Interés</strong>
     </div>
 
     <div class="panel-body" >

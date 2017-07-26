@@ -1,7 +1,7 @@
 <div class="panel panel-default" style="height: 200px">
 
     <div class="panel-heading">
-        <strong>Indicadores económicos</strong>
+        <strong>Indicadores Económicos</strong>
     </div>
 
     <div class="panel-body" >

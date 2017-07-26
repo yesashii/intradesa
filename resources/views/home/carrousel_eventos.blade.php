@@ -2,25 +2,25 @@
     <div class="carousel-inner" role="listbox">
         <div class="item active">
             <div class="jumbotron hero-nature carousel-hero" style="background-image:url({{ 'http://lorempixel.com/600/600' }});">
-                <h2 class="hero-title">Hero Nature</h2>
-                <p class="hero-subtitle">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                <p><a class="btn btn-primary btn-lg hero-button" role="button" href="#">Ver Más</a></p>
+                <div><h3>Hero Nature</h3></div>
+                <div >Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</div>
+                <div><a class="btn btn-primary btn-sm hero-button" role="button" href="#">Ver Más</a></div>
             </div>
         </div>
 
-        <div class="item">
+        <div class="item ">
             <div class="jumbotron hero-nature carousel-hero" style="background-image:url({{ 'http://lorempixel.com/600/600' }});">
-                <h2 class="hero-title">Hero Nature</h2>
-                <p class="hero-subtitle">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                <p><a class="btn btn-primary btn-lg hero-button" role="button" href="#">Ver Más</a></p>
+                <div><h3>Hero Nature</h3></div>
+                <div >Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</div>
+                <div><a class="btn btn-primary btn-sm hero-button" role="button" href="#">Ver Más</a></div>
             </div>
         </div>
 
-        <div class="item">
+        <div class="item ">
             <div class="jumbotron hero-nature carousel-hero" style="background-image:url({{ 'http://lorempixel.com/600/600' }});">
-                <h2 class="hero-title">Hero Nature</h2>
-                <p class="hero-subtitle">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                <p><a class="btn btn-primary btn-lg hero-button" role="button" href="#">Ver Más</a></p>
+                <div><h3>Hero Nature</h3></div>
+                <div >Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</div>
+                <div><a class="btn btn-primary btn-sm hero-button" role="button" href="#">Ver Más</a></div>
             </div>
         </div>
 
