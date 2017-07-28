@@ -87,7 +87,8 @@ Route::get('trae-noticias', 'Admin\SubirNoticiaController@traeNoticias');
 Route::get('actualiza-noticia/{id}', 'Admin\SubirNoticiaController@actualiza');
 Route::get('muestra-noticia/{id}', 'Admin\SubirNoticiaController@muestra');
 
-
+// SECCION DE GALERIA >>.
+Route::get('muestra-galeria/{id}', 'Eventos\GalleriaController@muestraGaleria');
 
 
 
@@ -146,6 +147,20 @@ Route::get( 'Prueba', function (){
 Route::get('b2bAutorizaIncCombo', 'ExtraControllers\b2bcontroller@cargaComboProceso');
 
 
+Route::get('/test_galleria/', function () {
+    return view('galleria_eventos.index');
+});
+Route::get('/test_galleria_web/', function () {
+    return view('galleria_eventos.2.index_2');
+});
+
+
+Route::get('/test_galleria_web_2/', function () {
+    return view('galleria_eventos.3.index');
+});
+
+
+Route::get('trae_fotos_galeria', 'Eventos\GalleriaController@index');
 
 
 

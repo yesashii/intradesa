@@ -4,27 +4,19 @@
 @section('extra_css')
     @include('home.scope_css.home_css')
 @endsection
+@section('extra_js_app')
+
+@endsection
 
 @section('content')
 
     <div class="col-md-2">
-
-
-        <div class="row">
-            <div class="col-md-12">
-                @include('home.menu_vertical')
-            </div>
-        </div>
+        @include('home.menu_vertical')
     </div>
 
+
     <div class="col-md-3">
-
-        <div class="row">
-            <div class="col-md-12">
-                @include('home.seccion_eventos')
-            </div>
-        </div>
-
+        @include('home.carrousel_eventos')
     </div>
 
     <div class="col-md-4">
@@ -75,19 +67,31 @@
     </div>
 
 
+@endsection
 
-
-
-
-
-
-
-
+@section('footer')
+    <!-- footer -->
+    <div class="row" style="padding-bottom: 0 !important;">
+        <div class="col-md-12">
+            <footer>
+                <p id="pe" style="font-family:Open Sans; color:#406286 !important;">2017 © DESARROLLO Y TECNOLOGÍA - DESA SA.
+                    <img height="15" src="{{ asset('img/logos/logo-desa.png') }}" alt="">
+                    <img height="15" src="{{ asset('img/logos/lacav.jpg') }}" alt=""></p>
+            </footer>
+        </div>
+    </div>
+    <!-- #footer -->
 @endsection
 
 @section('extra_script')
-    @include('layouts.js.jquery')
     @include('home.scope_js.home_js')
+
+
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').focus()
+        })
+    </script>
 @endsection
 
 
