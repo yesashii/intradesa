@@ -70,17 +70,6 @@
                         </ul>
                     </li>
                     <!-- #nosotros -->
-                    <!-- procedimientos -->
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <strong>Procedimientos<span class="caret"></span></strong>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li> <a href="{{ route('reglamento') }}" >Reglamento interno        </a></li>
-                        </ul>
-                    </li>
-                    <!-- #procedimientos -->&nbsp;
-
                     <!-- contacto -->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -95,7 +84,7 @@
                     <!-- sucursales -->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <strong>Sucursales<span class="caret"></span></strong>
+                         <!--   <strong>Sucursales<span class="caret"></span></strong> -->
                         </a>
                     </li>
                     <!-- #sucursales -->

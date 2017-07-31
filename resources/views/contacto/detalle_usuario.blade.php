@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app.index')
 @include('funciones.traductor')
 
 @section('extra_css')

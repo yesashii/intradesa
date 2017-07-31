@@ -53,11 +53,12 @@ class HomeController extends Controller
 
     public function traeDollar()
     {
-        $token = '8eeda224be021de585df5588435aa489eb4c5fde';
+    /*    $token = '8eeda224be021de585df5588435aa489eb4c5fde';
         $url = 'http://api.sbif.cl/api-sbifv3/recursos_api/dolar?apikey='.$token.'&formato=JSON';
         $datas_json = file_get_contents($url);
         $datas_array = json_decode($datas_json, true);
-
-        return $datas_array['Dolares']['0']['Valor'];
+    */
+        $datas_array = [];
+        return $datas_array;//$datas_array['Dolares']['0']['Valor'];
     }
 }

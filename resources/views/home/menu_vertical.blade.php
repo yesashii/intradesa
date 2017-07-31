@@ -61,6 +61,22 @@
 
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <a data-toggle="collapse"  href="#collapseOne_rrhh_procedimientos"><span class="glyphicon glyphicon glyphicon-log-out"></span> Procedimientos</a>
+                                    <!-- SUB PANEL FORMULARIOS -->
+                                    <div id="collapseOne_rrhh_procedimientos" class="collapse">
+
+                                        <ul>
+                                            <li><a href="{{ route('reglamento') }}">Reglamento Interno</a></li>
+                                        </ul>
+
+                                    </div>
+                                    <!-- SUB PANEL FORMULARIOS -->
+
+                                </td>
+                            </tr>
+
                         </table>
                     </div>
                 </div>

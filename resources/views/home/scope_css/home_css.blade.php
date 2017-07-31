@@ -4,10 +4,11 @@
      */
     .fondoCumple{
 
-        background-color: rgba(255, 255, 255, 0.5) !important;
-        background-image: url(img/cumpleanios/fondo_01.png);
+        background-color: rgba(255, 255, 255, 0.6) !important;
+        background-image: url(img/cumpleanios/cumple.png);
         background-blend-mode: color;
         background-repeat: no-repeat;
+
         overflow: scroll;
         width: 100%;
         height: 200px;
@@ -66,6 +67,7 @@
 <style>
     .titulo-panel{
         color:#658c63 !important;
+        font-size: medium !important;
     }
 </style>
 <!-- #TITULOS DE LOS PANELES -->

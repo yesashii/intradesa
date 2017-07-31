@@ -10,14 +10,27 @@
 
 @section('content')
 
+    <!-- menú de áreas -->
     <div class="col-md-2">
         @include('home.menu_vertical')
     </div>
+    <!-- #menú de áreas -->
 
-
+    <!-- sección de eventos | destacados | promociones -->
     <div class="col-md-3">
-        @include('home.carrousel_eventos')
+        <div class="col-md-12">
+            @include('home.carrousel_eventos')
+        </div>
+        <div class="col-md-12">
+            @include('home.seccion_destacados')
+        </div>
+        <div class="col-md-12">
+            @include('home.seccion_promociones')
+        </div>
+
     </div>
+    <!-- #sección de eventos | destacados | promociones -->
+
 
     <div class="col-md-4">
 
