@@ -70,9 +70,9 @@ $meses=array(1=>"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
     <tr >
         <?php
         $last_cell=$diaSemana+$ultimoDiaMes;
-        // hacemos un bucle hasta 42, que es el máximo de valores que puede
+        // hacemos un bucle hasta 42, que es el máximo de valores que puede ( en julio del 2017 42 cayus{o que se perdiera el 31)
         // haber... 6 columnas de 7 dias
-        for($i=1;$i<=42;$i++)
+        for($i=1;$i<=43;$i++)
         {
             if($i==$diaSemana)
             {
