@@ -91,9 +91,10 @@
 <link href="https://fonts.googleapis.com/css?family=Baloo|Kaushan+Script" rel="stylesheet">
 
 <style>
+
     .navbar-default {
         background-color: #c8c6a5 !important;
-        border-color: #d3e0e9;
+        border-color: #c8c6a5;
     }
 
     /* Texto del menú */
@@ -113,8 +114,6 @@
 
 <style >
 
-
-
     .body{
         background-repeat: no-repeat;
         background-position: center;
@@ -122,4 +121,26 @@
         background-attachment: fixed;
         background-size: 100%;
     }
+
+    .fondoVerde{
+        background-color: #c8c6a5!important;
+        border: solid #c8c6a5!important;
+    }
+
+    .menuVerticalBorde{
+        border: 0px!important;
+    }
+    .tituloMenuVertical{
+        color: #008540 !important;
+    }
+
+    .linkMenuVertical{
+        color: #13b02f !important;
+        font-weight: bold;
+        font-size: smaller;
+    }
+    .bordeRecto{
+        border-radius: 0!important;
+    }
+
 </style>

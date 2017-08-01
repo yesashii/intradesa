@@ -6,7 +6,7 @@
 
     <div class="panel-body" >
 
-        <ul>
+        <ul >
             <li><a target="_blank" href="http://homer.sii.cl/">www.sii.cl</a> </li>
             <li><a target="_blank" href="http://www.desa.cl/">www.desa.cl</a> </li>
             <li><a target="_blank" href="http://www.lacav.cl/index.php?seccion=club">www.lacav.cl</a> </li>

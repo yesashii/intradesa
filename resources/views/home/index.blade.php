@@ -10,11 +10,6 @@
 
 @section('content')
 
-    <!-- menú de áreas -->
-    <div class="col-md-2">
-        @include('home.menu_vertical')
-    </div>
-    <!-- #menú de áreas -->
 
     <!-- sección de eventos | destacados | promociones -->
     <div class="col-md-3">
@@ -32,7 +27,7 @@
     <!-- #sección de eventos | destacados | promociones -->
 
 
-    <div class="col-md-4">
+    <div class="col-md-5">
 
         <!-- seccion de noticias -->
         <div class="row">
@@ -51,7 +46,7 @@
         <!-- #seccion indicadores económicos -->
 
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
 
         <!-- cumpleaños -->
         <div class="row">

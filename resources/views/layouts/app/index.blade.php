@@ -22,17 +22,21 @@
     @yield('extra_js_app')
     <!-- #Scripts -->
 </head>
-<body >
+<body style="margin: 0 auto!important;" >
 <div id="app" class="col-12">
 
     <div id="rowfoot" class="row">
-        <div id="menu_vertical" class="col col-lg-2"  style="display: none">
-            @include('layouts.app.menu_vertical')
-        </div>
-
         <div class="col col-lg-12" id="cuerpo_sitio" >
-            @include('layouts.app.menu_horizontal')
-            @yield('content')
+
+            <div class="col col-lg-2" style="padding-right: 0!important; max-width: 208px">
+                @include('layouts.app.menu_vertical')
+            </div>
+            <div class="col col-lg-10" style="padding-left: 0!important;">
+                @include('layouts.app.menu_horizontal')
+                @yield('content')
+            </div>
+
+
         </div>
     </div>
 

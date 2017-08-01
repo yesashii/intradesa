@@ -1,6 +1,6 @@
 <!-- menu -->
-<nav class="navbar navbar-default" >
-    <div class="container">
+<nav class="navbar navbar-default bordeRecto" >
+
 
         <div class="navbar-header">
 
@@ -24,15 +24,6 @@
             <!-- menu personal -->
 
                 <ul class="nav navbar-nav navbar-left">
-
-                   <!-- ESTO LANZA EL MENU VERTICAL CON JS, SE PIDIO ELIMINAR -->
-                    <!--
-                    <li class="dropdown">
-                        <a href="#" role="button" onclick="toggle_menu_vertical()" aria-expanded="false">
-                            <strong><span class="glyphicon glyphicon-align-justify"></span> Áreas</strong>
-                        </a>
-                    </li>
-                    -->
 
                     <!-- mi perfil -->
                     <li class="dropdown">
@@ -84,7 +75,7 @@
                     <!-- sucursales -->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                         <!--   <strong>Sucursales<span class="caret"></span></strong> -->
+                            <strong>Sucursales<span class="caret"></span></strong>
                         </a>
                     </li>
                     <!-- #sucursales -->
@@ -132,6 +123,6 @@
                 @endif
             </ul>
         </div>
-    </div>
+
 </nav>
 <!-- #menu -->

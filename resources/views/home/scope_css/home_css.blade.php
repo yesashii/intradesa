@@ -5,7 +5,8 @@
     .fondoCumple{
 
         background-color: rgba(255, 255, 255, 0.6) !important;
-        background-image: url(img/cumpleanios/cumple.png);
+        background-size: 100%;
+        background-image: url(img/cumpleanios/fondo_03.jpg);
         background-blend-mode: color;
         background-repeat: no-repeat;
 
@@ -17,11 +18,13 @@
         background: rgba(2, 41, 136, 0) !important;
         color: #3113ff !important;
         font-weight: bold !important;
+        border: 0px!important;
     }
     .transparente_sin_correo{
         background: rgba(122, 130, 136, 0)!important;
         color: rgba(2, 2, 6, 0.95) !important;
         font-weight: bold !important;
+        border: 0px!important;
     }
 
     /* Container personalizado para el home */

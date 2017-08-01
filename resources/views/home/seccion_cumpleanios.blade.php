@@ -16,14 +16,14 @@
                 <!-- pestaña 1 -->
                 <div class="tab-pane active well fondoCumple " role="tabpanel" id="tab1-1">
 
-                    <div class="list-group ">
+                    <div class="list-group " style="border: 0!important;">
                         @if( count($cumplesDia) > 0 )
                             @foreach( $cumplesDia as $cumpleanero )
 
                                 @if( isset($cumpleanero->int_usuarios->id) )
-                                    <a href="{{ url('detalleUsuario/'.$cumpleanero->int_usuarios->id) }}" class="list-group-item transparente"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span> </a>
+                                    <a href="{{ url('detalleUsuario/'.$cumpleanero->int_usuarios->id) }}"  class="list-group-item transparente" ><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }} </span> </a>
                                 @else
-                                    <a href="#" class="list-group-item transparente_sin_correo"><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }}</span></a>
+                                    <a href="#" class="list-group-item transparente_sin_correo" ><span>{{ traduceDia($cumpleanero->FECHA_NACIMIENTO).' '.traduceMes( $cumpleanero->FECHA_NACIMIENTO ).' | '.ucwords(mb_strtolower($cumpleanero->NOMBRE)).' '.ucwords(mb_strtolower($cumpleanero->APELLIDO_PATERNO)) }}</span></a>
                                 @endif
 
                             @endforeach
