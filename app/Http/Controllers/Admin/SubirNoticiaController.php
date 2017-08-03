@@ -53,7 +53,7 @@ class SubirNoticiaController extends Controller
 
         $noticia->titulo            = $titulo;
         $noticia->sub_titulo        = $sub_titulo;
-        $noticia->texto             = $texto;
+        $noticia->texto             = htmlspecialchars($texto);
         $noticia->imagen            = 'img/noticias/'.$nombreImagen;
         $noticia->fecha             = (string)Carbon::now('America/Santiago')->toDateTimeString();
         $noticia->url               = '';

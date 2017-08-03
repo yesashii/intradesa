@@ -49,18 +49,61 @@
 
 
 @section('content')
-    <div class="gallerycontainer" style="width: 100px">
-        <div style="overflow: scroll; width: 100%; height: 545px;">
-        @foreach( $arr_fotos as $foto )
 
-                <a class="thumbnail" href="#thumb"><img src="{{ asset('img/eventos/'.$foto) }}" width="100px" height="66px" border="0" />
-                <span><img width="700px" height="500px" src="{{ asset('img/eventos/'.$foto) }}" /><br />.</span></a>
+    <div class="container">
 
-        @endforeach
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+                <h1 >GALERÍA</h1>
+            </div>
+
+            <div class="panel-body">
+
+                <div class="row">
+
+                    <div class="gallerycontainer col col-lg-2" >
+
+                        <div style="overflow: scroll; width: 100%; height: 545px;">
+                            @foreach( $arr_fotos as $foto )
+                                <a class="thumbnail"
+                                   href="#thumb">
+                                    <img onclick="muestraImagen( '{{ asset('img/eventos/'.$foto) }}' )" src="{{ asset('img/eventos/'.$foto) }}" width="100px" height="66px" border="0" />
+                                </a>
+
+                            @endforeach
+                        </div>
+                    </div>
+
+                    <div id="imagen" class="col col-lg-10">
+                        <img width="100%" height="100%" class="image" src="{{ asset('img/eventos/'.$arr_fotos[0]) }}" />
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-11">
+                    <a href="{{URL::previous()}}" class="btn btn-info" role="button"><span class="glyphicon glyphicon-chevron-left"></span>Volver</a>
+                </div>
+            </div>
+            <br>
         </div>
 
-
     </div>
+
+    <script src="{{ asset('semantic/semantic.js') }}"></script>
+    <script>
+
+        const muestraImagen = function ( urlImg ) {
+            const img = $('#imagen');
+            img.html('<img width="100%" height="100%" class="image" src="'+urlImg+'" />')
+        }
+
+    </script>
+
 @endsection
 
 

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app.index')
 
 
 <template id="c-titulo-panel">
